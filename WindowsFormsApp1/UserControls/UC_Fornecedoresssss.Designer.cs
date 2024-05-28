@@ -78,6 +78,7 @@
 			// 
 			// dataGridView1
 			// 
+			this.dataGridView1.AllowUserToAddRows = false;
 			this.dataGridView1.AllowUserToDeleteRows = false;
 			this.dataGridView1.AutoGenerateColumns = false;
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -89,7 +90,7 @@
 			this.dataGridView1.Location = new System.Drawing.Point(40, 122);
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.ReadOnly = true;
-			this.dataGridView1.Size = new System.Drawing.Size(344, 158);
+			this.dataGridView1.Size = new System.Drawing.Size(346, 158);
 			this.dataGridView1.TabIndex = 6;
 			this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
 			// 
@@ -162,6 +163,7 @@
 			this.addNovoPro.Text = "Adicionar";
 			this.addNovoPro.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.addNovoPro.UseVisualStyleBackColor = false;
+			this.addNovoPro.Click += new System.EventHandler(this.addNovoPro_Click);
 			// 
 			// NIFtextBox2
 			// 
@@ -169,6 +171,7 @@
 			this.NIFtextBox2.Name = "NIFtextBox2";
 			this.NIFtextBox2.Size = new System.Drawing.Size(246, 20);
 			this.NIFtextBox2.TabIndex = 7;
+			this.NIFtextBox2.TextChanged += new System.EventHandler(this.NIFtextBox2_TextChanged);
 			// 
 			// label2
 			// 
@@ -193,9 +196,9 @@
 			this.label4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label4.Location = new System.Drawing.Point(18, 19);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(130, 20);
+			this.label4.Size = new System.Drawing.Size(129, 20);
 			this.label4.TabIndex = 4;
-			this.label4.Text = "Nome do produto";
+			this.label4.Text = "Nome Fornecedor";
 			// 
 			// label5
 			// 
