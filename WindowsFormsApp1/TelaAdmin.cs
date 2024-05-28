@@ -67,6 +67,12 @@ namespace WindowsFormsApp1
 			UC_DashBoard uc = new UC_DashBoard();
 			addUserControls(uc);
 		}
+
+		private void iconButton5_Click(object sender, EventArgs e)
+		{
+			UC_Categorias uc = new UC_Categorias();
+			addUserControls(uc);
+		}
 	}
 
 }

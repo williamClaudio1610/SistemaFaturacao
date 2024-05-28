@@ -54,7 +54,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\AdminRules.cs" />
+    <Compile Include="Classes\Categoria.cs" />
     <Compile Include="Classes\Fornecedores.cs" />
+    <Compile Include="Classes\Produto.cs" />
+    <Compile Include="Classes\TaxasIVA.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +76,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SistemaFaturaDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SistemaFaturaDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SistemaFaturaDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="TelaAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +92,12 @@
     </Compile>
     <Compile Include="UserControls\UC_AddNovoUser.Designer.cs">
       <DependentUpon>UC_AddNovoUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_Categorias.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Categorias.Designer.cs">
+      <DependentUpon>UC_Categorias.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UC_DashBoard.cs">
       <SubType>UserControl</SubType>
@@ -136,6 +150,9 @@
     <EmbeddedResource Include="UserControls\UC_AddNovoUser.resx">
       <DependentUpon>UC_AddNovoUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_Categorias.resx">
+      <DependentUpon>UC_Categorias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_DashBoard.resx">
       <DependentUpon>UC_DashBoard.cs</DependentUpon>
     </EmbeddedResource>
@@ -185,6 +202,17 @@
     </None>
     <None Include="SistemaFaturaDataSet1.xss">
       <DependentUpon>SistemaFaturaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaFaturaDataSet2.xsc">
+      <DependentUpon>SistemaFaturaDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaFaturaDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SistemaFaturaDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SistemaFaturaDataSet2.xss">
+      <DependentUpon>SistemaFaturaDataSet2.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

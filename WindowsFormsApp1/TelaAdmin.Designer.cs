@@ -35,6 +35,7 @@ namespace WindowsFormsApp1
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaAdmin));
 			this.panel2 = new System.Windows.Forms.Panel();
+			this.iconButton5 = new FontAwesome.Sharp.IconButton();
 			this.iconButton4 = new FontAwesome.Sharp.IconButton();
 			this.logOutBtn = new System.Windows.Forms.Button();
 			this.iconButton3 = new FontAwesome.Sharp.IconButton();
@@ -52,6 +53,7 @@ namespace WindowsFormsApp1
 			// panel2
 			// 
 			this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(58)))), ((int)(((byte)(83)))));
+			this.panel2.Controls.Add(this.iconButton5);
 			this.panel2.Controls.Add(this.iconButton4);
 			this.panel2.Controls.Add(this.logOutBtn);
 			this.panel2.Controls.Add(this.iconButton3);
@@ -64,6 +66,25 @@ namespace WindowsFormsApp1
 			this.panel2.Name = "panel2";
 			this.panel2.Size = new System.Drawing.Size(171, 531);
 			this.panel2.TabIndex = 1;
+			// 
+			// iconButton5
+			// 
+			this.iconButton5.Dock = System.Windows.Forms.DockStyle.Top;
+			this.iconButton5.FlatAppearance.BorderSize = 0;
+			this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.iconButton5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.iconButton5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.None;
+			this.iconButton5.IconColor = System.Drawing.Color.Black;
+			this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
+			this.iconButton5.IconSize = 16;
+			this.iconButton5.Location = new System.Drawing.Point(0, 312);
+			this.iconButton5.Name = "iconButton5";
+			this.iconButton5.Size = new System.Drawing.Size(171, 40);
+			this.iconButton5.TabIndex = 7;
+			this.iconButton5.Text = "Categorias de Produtos";
+			this.iconButton5.UseVisualStyleBackColor = true;
+			this.iconButton5.Click += new System.EventHandler(this.iconButton5_Click);
 			// 
 			// iconButton4
 			// 
@@ -81,7 +102,6 @@ namespace WindowsFormsApp1
 			this.iconButton4.Size = new System.Drawing.Size(171, 40);
 			this.iconButton4.TabIndex = 6;
 			this.iconButton4.Text = "Fornecedores";
-			this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.iconButton4.UseVisualStyleBackColor = true;
 			this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
 			// 
@@ -115,7 +135,6 @@ namespace WindowsFormsApp1
 			this.iconButton3.Size = new System.Drawing.Size(171, 40);
 			this.iconButton3.TabIndex = 5;
 			this.iconButton3.Text = "Taxas";
-			this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.iconButton3.UseVisualStyleBackColor = true;
 			this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
 			// 
@@ -135,7 +154,6 @@ namespace WindowsFormsApp1
 			this.iconButton2.Size = new System.Drawing.Size(171, 40);
 			this.iconButton2.TabIndex = 4;
 			this.iconButton2.Text = "Usuários";
-			this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.iconButton2.UseVisualStyleBackColor = true;
 			this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
 			// 
@@ -155,7 +173,6 @@ namespace WindowsFormsApp1
 			this.iconButton1.Size = new System.Drawing.Size(171, 40);
 			this.iconButton1.TabIndex = 3;
 			this.iconButton1.Text = "Produtos";
-			this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.iconButton1.UseVisualStyleBackColor = true;
 			this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
 			// 
@@ -175,7 +192,6 @@ namespace WindowsFormsApp1
 			this.dashBtn.Size = new System.Drawing.Size(171, 40);
 			this.dashBtn.TabIndex = 2;
 			this.dashBtn.Text = "DashBoard";
-			this.dashBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.dashBtn.UseVisualStyleBackColor = true;
 			this.dashBtn.Click += new System.EventHandler(this.dashBtn_Click);
 			// 
@@ -255,6 +271,7 @@ namespace WindowsFormsApp1
 		private Button logOutBtn;
 		private FontAwesome.Sharp.IconButton iconButton4;
 		private Button button1;
+		private FontAwesome.Sharp.IconButton iconButton5;
 	}
 
 }

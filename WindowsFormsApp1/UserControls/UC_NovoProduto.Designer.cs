@@ -39,7 +39,6 @@
 			this.label7 = new System.Windows.Forms.Label();
 			this.FornecedorcomboBox1 = new System.Windows.Forms.ComboBox();
 			this.categoriaComboBox2 = new System.Windows.Forms.ComboBox();
-			this.tipoqtdComboBox1 = new System.Windows.Forms.ComboBox();
 			this.label6 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
 			this.QuantidadetextBox3 = new System.Windows.Forms.TextBox();
@@ -98,7 +97,6 @@
 			this.panel2.Controls.Add(this.label7);
 			this.panel2.Controls.Add(this.FornecedorcomboBox1);
 			this.panel2.Controls.Add(this.categoriaComboBox2);
-			this.panel2.Controls.Add(this.tipoqtdComboBox1);
 			this.panel2.Controls.Add(this.label6);
 			this.panel2.Controls.Add(this.label5);
 			this.panel2.Controls.Add(this.QuantidadetextBox3);
@@ -131,6 +129,7 @@
 			// 
 			// IVAcomboBox2
 			// 
+			this.IVAcomboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.IVAcomboBox2.FormattingEnabled = true;
 			this.IVAcomboBox2.Location = new System.Drawing.Point(177, 240);
 			this.IVAcomboBox2.Name = "IVAcomboBox2";
@@ -149,6 +148,7 @@
 			// 
 			// FornecedorcomboBox1
 			// 
+			this.FornecedorcomboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.FornecedorcomboBox1.FormattingEnabled = true;
 			this.FornecedorcomboBox1.Location = new System.Drawing.Point(177, 193);
 			this.FornecedorcomboBox1.Name = "FornecedorcomboBox1";
@@ -157,19 +157,13 @@
 			// 
 			// categoriaComboBox2
 			// 
+			this.categoriaComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.categoriaComboBox2.FormattingEnabled = true;
 			this.categoriaComboBox2.Location = new System.Drawing.Point(177, 148);
 			this.categoriaComboBox2.Name = "categoriaComboBox2";
 			this.categoriaComboBox2.Size = new System.Drawing.Size(246, 21);
 			this.categoriaComboBox2.TabIndex = 11;
-			// 
-			// tipoqtdComboBox1
-			// 
-			this.tipoqtdComboBox1.FormattingEnabled = true;
-			this.tipoqtdComboBox1.Location = new System.Drawing.Point(279, 97);
-			this.tipoqtdComboBox1.Name = "tipoqtdComboBox1";
-			this.tipoqtdComboBox1.Size = new System.Drawing.Size(144, 21);
-			this.tipoqtdComboBox1.TabIndex = 10;
+			this.categoriaComboBox2.SelectedIndexChanged += new System.EventHandler(this.categoriaComboBox2_SelectedIndexChanged);
 			// 
 			// label6
 			// 
@@ -254,6 +248,7 @@
 			this.addNovoPro.Text = "Adicionar";
 			this.addNovoPro.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.addNovoPro.UseVisualStyleBackColor = false;
+			this.addNovoPro.Click += new System.EventHandler(this.addNovoPro_Click);
 			// 
 			// button2
 			// 
@@ -279,6 +274,7 @@
 			this.Controls.Add(this.panel1);
 			this.Name = "UC_NovoProduto";
 			this.Size = new System.Drawing.Size(937, 555);
+			this.Load += new System.EventHandler(this.UC_NovoProduto_Load);
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
 			this.panel2.ResumeLayout(false);
@@ -301,7 +297,6 @@
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.TextBox NomeProdtextBox1;
 		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.ComboBox tipoqtdComboBox1;
 		private System.Windows.Forms.ComboBox categoriaComboBox2;
 		private System.Windows.Forms.ComboBox FornecedorcomboBox1;
 		private System.Windows.Forms.Label label7;

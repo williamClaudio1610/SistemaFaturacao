@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -57,7 +58,41 @@ namespace WindowsFormsApp1.Classes
 					return 3; // Indica um erro durante a operação
 				}
 			}
+
+			
 		}
+
+		public List<string> ObterFornecedores()
+		{
+			List<string> fornecedores = new List<string>();
+			string connectionStringSQL = "Data Source=WA_16;Initial Catalog=SistemaFatura;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+
+			using (SqlConnection conn = new SqlConnection(connectionStringSQL))
+			{
+				try
+				{
+					conn.Open();
+					string query = "SELECT Nome FROM Fornecedores";
+					using (SqlCommand cmd = new SqlCommand(query, conn))
+					{
+						using (SqlDataReader reader = cmd.ExecuteReader())
+						{
+							while (reader.Read())
+							{
+								fornecedores.Add(reader["Nome"].ToString());
+							}
+						}
+					}
+				}
+				catch (Exception ex)
+				{
+					return null;
+				}
+			}
+
+			return fornecedores;
+		}
+
 
 	}
 }

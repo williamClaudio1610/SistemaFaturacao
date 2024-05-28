@@ -63,6 +63,7 @@ namespace WindowsFormsApp1.UserControls
 							DataTable dt = new DataTable();
 							sqlQuery.Fill(dt);
 							dataGridView1.DataSource = dt;
+							voltarATela();
 						}
 						else
 						{
@@ -76,12 +77,26 @@ namespace WindowsFormsApp1.UserControls
 				}
 			}
 		}
+		private void voltarATela()
+		{
+			UC_Taxassss uc = new UC_Taxassss();
+			Form telaAdmin = this.ParentForm as Form;
+			if (telaAdmin != null)
+			{
+				TelaAdmin tl = (TelaAdmin)telaAdmin;
+				tl.addUserControls(uc);
+			}
+
+		}
 
 		private void ValorTxatextBox1_TextChanged(object sender, EventArgs e)
 		{
 			
 		}
 
+		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
 
+		}
 	}
 }

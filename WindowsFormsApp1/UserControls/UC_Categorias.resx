@@ -117,70 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="produtosBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>778, 17</value>
-  </metadata>
-  <metadata name="sistemaFaturaDataSetBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>534, 17</value>
-  </metadata>
-  <metadata name="sistemaFaturaDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="produtosBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>184, 17</value>
-  </metadata>
-  <metadata name="produtosTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>363, 17</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="addNovoPro.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-        zBvvxaxbAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <metadata name="sistemaFaturaDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 54</value>
-  </metadata>
-  <metadata name="sistemaFaturaDataSet1BindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>190, 54</value>
-  </metadata>
-  <metadata name="produtosBindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>440, 54</value>
+  <metadata name="categoriaBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>190, 17</value>
   </metadata>
   <metadata name="sistemaFaturaDataSet2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>625, 54</value>
+    <value>17, 17</value>
   </metadata>
-  <metadata name="vwProdutosDetalhadosBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>798, 54</value>
-  </metadata>
-  <metadata name="vw_ProdutosDetalhadosTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1051, 54</value>
+  <metadata name="categoriaTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>370, 17</value>
   </metadata>
 </root>

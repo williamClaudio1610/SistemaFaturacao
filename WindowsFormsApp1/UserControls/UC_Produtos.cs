@@ -27,10 +27,10 @@ namespace WindowsFormsApp1.UserControls
 			using (SqlConnection conn = new SqlConnection(connectionStringSQL))
 			{
 				conn.Open();
-				SqlDataAdapter sqlQuery = new SqlDataAdapter("SELECT * FROM Produtos", conn);
+				SqlDataAdapter sqlQuery = new SqlDataAdapter("SELECT * FROM vw_ProdutosDetalhados", conn);
 				DataTable dt = new DataTable();
 				sqlQuery.Fill(dt);
-				dataGridProdutos.DataSource = dt;
+				dataGridView1.DataSource = dt;
 			}
 		}
 
