@@ -65,7 +65,9 @@ namespace WindowsFormsApp1
 						if (adminCount > 0)
 						{
 							MessageBox.Show("Bem-vindo, Administrador!");
-							// Adicione aqui o código para redirecionar para a tela do administrador
+							this.Hide();
+							TelaAdmin ta = new TelaAdmin();
+							ta.Show();
 							return;
 						}
 					}

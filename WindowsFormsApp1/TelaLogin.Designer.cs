@@ -61,18 +61,20 @@
 			// 
 			// textBox1
 			// 
+			this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.textBox1.Location = new System.Drawing.Point(98, 225);
 			this.textBox1.Multiline = true;
 			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(216, 31);
+			this.textBox1.Size = new System.Drawing.Size(216, 27);
 			this.textBox1.TabIndex = 2;
 			// 
 			// textBox2
 			// 
+			this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.textBox2.Location = new System.Drawing.Point(97, 300);
 			this.textBox2.Multiline = true;
 			this.textBox2.Name = "textBox2";
-			this.textBox2.Size = new System.Drawing.Size(216, 31);
+			this.textBox2.Size = new System.Drawing.Size(216, 27);
 			this.textBox2.TabIndex = 4;
 			// 
 			// label3

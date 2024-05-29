@@ -251,6 +251,7 @@ namespace WindowsFormsApp1
 			this.Padding = new System.Windows.Forms.Padding(9, 0, 17, 0);
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Administrator";
+			this.Load += new System.EventHandler(this.TelaAdmin_Load);
 			this.panel2.ResumeLayout(false);
 			this.logoPanel.ResumeLayout(false);
 			this.logoPanel.PerformLayout();

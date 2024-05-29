@@ -35,7 +35,7 @@ namespace WindowsFormsApp1.UserControls
 		private void addNovoPro_Click(object sender, EventArgs e)
 		{
 			string descricao = DescricaotextBox2.Text.Trim();
-			//double valorTaxa = ValorTxatextBox1;
+			string valor = valorTaxa.Text;
 
 			if (string.IsNullOrEmpty(descricao))
 			{
@@ -52,7 +52,7 @@ namespace WindowsFormsApp1.UserControls
 					using (SqlCommand cmd = new SqlCommand(insertQuery, conn))
 					{
 						cmd.Parameters.AddWithValue("@Descricao", descricao);
-						//cmd.Parameters.AddWithValue("@Taxa", valorTaxa);
+						cmd.Parameters.AddWithValue("@Taxa", valor);
 
 						int rowsAffected = cmd.ExecuteNonQuery();
 						if (rowsAffected > 0)

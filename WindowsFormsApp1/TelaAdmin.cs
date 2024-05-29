@@ -73,6 +73,12 @@ namespace WindowsFormsApp1
 			UC_Categorias uc = new UC_Categorias();
 			addUserControls(uc);
 		}
+
+		private void TelaAdmin_Load(object sender, EventArgs e)
+		{
+			
+
+		}
 	}
 
 }
