@@ -69,7 +69,7 @@
 			// 
 			// textBox2
 			// 
-			this.textBox2.Location = new System.Drawing.Point(98, 311);
+			this.textBox2.Location = new System.Drawing.Point(97, 300);
 			this.textBox2.Multiline = true;
 			this.textBox2.Name = "textBox2";
 			this.textBox2.Size = new System.Drawing.Size(216, 31);
@@ -80,7 +80,7 @@
 			this.label3.AutoSize = true;
 			this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.label3.Location = new System.Drawing.Point(93, 283);
+			this.label3.Location = new System.Drawing.Point(92, 272);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(53, 21);
 			this.label3.TabIndex = 3;
@@ -99,12 +99,13 @@
 			// button1
 			// 
 			this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button1.Location = new System.Drawing.Point(160, 371);
+			this.button1.Location = new System.Drawing.Point(159, 352);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(86, 37);
 			this.button1.TabIndex = 7;
 			this.button1.Text = "Entrar";
 			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// TelaLogin
 			// 
