@@ -46,20 +46,20 @@
 			this.label2 = new System.Windows.Forms.Label();
 			this.administradorBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
-			this.administradorBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-			this.administradorTableAdapter1 = new WindowsFormsApp1.SistemaFaturaDataSet1TableAdapters.AdministradorTableAdapter();
 			this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.senhaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.administradorBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+			this.administradorTableAdapter1 = new WindowsFormsApp1.SistemaFaturaDataSet1TableAdapters.AdministradorTableAdapter();
 			this.dataGridView2 = new System.Windows.Forms.DataGridView();
-			this.funcionarioCaixaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-			this.funcionarioCaixaTableAdapter1 = new WindowsFormsApp1.SistemaFaturaDataSet1TableAdapters.FuncionarioCaixaTableAdapter();
 			this.iDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.nomeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.emailDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.senhaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.numeroVendasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.funcionarioCaixaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+			this.funcionarioCaixaTableAdapter1 = new WindowsFormsApp1.SistemaFaturaDataSet1TableAdapters.FuncionarioCaixaTableAdapter();
 			((System.ComponentModel.ISupportInitialize)(this.sistemaFaturaDataSet)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.administradorBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.vwFuncionariosAdministradoresBindingSource)).BeginInit();
@@ -184,6 +184,7 @@
 			this.dataGridView1.AllowUserToAddRows = false;
 			this.dataGridView1.AllowUserToDeleteRows = false;
 			this.dataGridView1.AutoGenerateColumns = false;
+			this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDDataGridViewTextBoxColumn,
@@ -196,15 +197,6 @@
 			this.dataGridView1.ReadOnly = true;
 			this.dataGridView1.Size = new System.Drawing.Size(445, 150);
 			this.dataGridView1.TabIndex = 8;
-			// 
-			// administradorBindingSource3
-			// 
-			this.administradorBindingSource3.DataMember = "Administrador";
-			this.administradorBindingSource3.DataSource = this.sistemaFaturaDataSet1;
-			// 
-			// administradorTableAdapter1
-			// 
-			this.administradorTableAdapter1.ClearBeforeFill = true;
 			// 
 			// iDDataGridViewTextBoxColumn
 			// 
@@ -234,11 +226,21 @@
 			this.senhaDataGridViewTextBoxColumn.Name = "senhaDataGridViewTextBoxColumn";
 			this.senhaDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
+			// administradorBindingSource3
+			// 
+			this.administradorBindingSource3.DataMember = "Administrador";
+			this.administradorBindingSource3.DataSource = this.sistemaFaturaDataSet1;
+			// 
+			// administradorTableAdapter1
+			// 
+			this.administradorTableAdapter1.ClearBeforeFill = true;
+			// 
 			// dataGridView2
 			// 
 			this.dataGridView2.AllowUserToAddRows = false;
 			this.dataGridView2.AllowUserToDeleteRows = false;
 			this.dataGridView2.AutoGenerateColumns = false;
+			this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDDataGridViewTextBoxColumn1,
@@ -252,15 +254,6 @@
 			this.dataGridView2.ReadOnly = true;
 			this.dataGridView2.Size = new System.Drawing.Size(545, 150);
 			this.dataGridView2.TabIndex = 9;
-			// 
-			// funcionarioCaixaBindingSource1
-			// 
-			this.funcionarioCaixaBindingSource1.DataMember = "FuncionarioCaixa";
-			this.funcionarioCaixaBindingSource1.DataSource = this.sistemaFaturaDataSet1;
-			// 
-			// funcionarioCaixaTableAdapter1
-			// 
-			this.funcionarioCaixaTableAdapter1.ClearBeforeFill = true;
 			// 
 			// iDDataGridViewTextBoxColumn1
 			// 
@@ -296,6 +289,15 @@
 			this.numeroVendasDataGridViewTextBoxColumn.HeaderText = "NumeroVendas";
 			this.numeroVendasDataGridViewTextBoxColumn.Name = "numeroVendasDataGridViewTextBoxColumn";
 			this.numeroVendasDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// funcionarioCaixaBindingSource1
+			// 
+			this.funcionarioCaixaBindingSource1.DataMember = "FuncionarioCaixa";
+			this.funcionarioCaixaBindingSource1.DataSource = this.sistemaFaturaDataSet1;
+			// 
+			// funcionarioCaixaTableAdapter1
+			// 
+			this.funcionarioCaixaTableAdapter1.ClearBeforeFill = true;
 			// 
 			// UC_Usuarios
 			// 

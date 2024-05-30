@@ -31,6 +31,8 @@
 			this.components = new System.ComponentModel.Container();
 			this.label5 = new System.Windows.Forms.Label();
 			this.panel2 = new System.Windows.Forms.Panel();
+			this.DescricaotextBox2 = new System.Windows.Forms.TextBox();
+			this.label2 = new System.Windows.Forms.Label();
 			this.addNovoPro = new System.Windows.Forms.Button();
 			this.valorTaxa = new System.Windows.Forms.TextBox();
 			this.label4 = new System.Windows.Forms.Label();
@@ -47,13 +49,11 @@
 			this.produtosTableAdapter = new WindowsFormsApp1.SistemaFaturaDataSet2TableAdapters.ProdutosTableAdapter();
 			this.taxasIVABindingSource1 = new System.Windows.Forms.BindingSource(this.components);
 			this.taxasIVATableAdapter1 = new WindowsFormsApp1.SistemaFaturaDataSet2TableAdapters.TaxasIVATableAdapter();
-			this.DescricaotextBox2 = new System.Windows.Forms.TextBox();
-			this.label2 = new System.Windows.Forms.Label();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
-			this.taxasIVABindingSource2 = new System.Windows.Forms.BindingSource(this.components);
 			this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.taxaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.taxasIVABindingSource2 = new System.Windows.Forms.BindingSource(this.components);
 			this.panel2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.taxasIVABindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.sistemaFaturaDataSet)).BeginInit();
@@ -87,6 +87,23 @@
 			this.panel2.Name = "panel2";
 			this.panel2.Size = new System.Drawing.Size(457, 148);
 			this.panel2.TabIndex = 13;
+			// 
+			// DescricaotextBox2
+			// 
+			this.DescricaotextBox2.Location = new System.Drawing.Point(167, 61);
+			this.DescricaotextBox2.Name = "DescricaotextBox2";
+			this.DescricaotextBox2.Size = new System.Drawing.Size(126, 20);
+			this.DescricaotextBox2.TabIndex = 12;
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label2.Location = new System.Drawing.Point(55, 61);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(74, 20);
+			this.label2.TabIndex = 11;
+			this.label2.Text = "Descrição";
 			// 
 			// addNovoPro
 			// 
@@ -199,26 +216,10 @@
 			// 
 			this.taxasIVATableAdapter1.ClearBeforeFill = true;
 			// 
-			// DescricaotextBox2
-			// 
-			this.DescricaotextBox2.Location = new System.Drawing.Point(167, 61);
-			this.DescricaotextBox2.Name = "DescricaotextBox2";
-			this.DescricaotextBox2.Size = new System.Drawing.Size(126, 20);
-			this.DescricaotextBox2.TabIndex = 12;
-			// 
-			// label2
-			// 
-			this.label2.AutoSize = true;
-			this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(55, 61);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(74, 20);
-			this.label2.TabIndex = 11;
-			this.label2.Text = "Descrição";
-			// 
 			// dataGridView1
 			// 
 			this.dataGridView1.AutoGenerateColumns = false;
+			this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDDataGridViewTextBoxColumn,
@@ -230,11 +231,6 @@
 			this.dataGridView1.Size = new System.Drawing.Size(347, 150);
 			this.dataGridView1.TabIndex = 15;
 			this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-			// 
-			// taxasIVABindingSource2
-			// 
-			this.taxasIVABindingSource2.DataMember = "TaxasIVA";
-			this.taxasIVABindingSource2.DataSource = this.sistemaFaturaDataSet2;
 			// 
 			// iDDataGridViewTextBoxColumn
 			// 
@@ -254,6 +250,11 @@
 			this.taxaDataGridViewTextBoxColumn.DataPropertyName = "Taxa";
 			this.taxaDataGridViewTextBoxColumn.HeaderText = "Taxa";
 			this.taxaDataGridViewTextBoxColumn.Name = "taxaDataGridViewTextBoxColumn";
+			// 
+			// taxasIVABindingSource2
+			// 
+			this.taxasIVABindingSource2.DataMember = "TaxasIVA";
+			this.taxasIVABindingSource2.DataSource = this.sistemaFaturaDataSet2;
 			// 
 			// UC_Taxassss
 			// 

@@ -36,18 +36,18 @@
 			this.label2 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
-			this.panel1 = new System.Windows.Forms.Panel();
-			this.label3 = new System.Windows.Forms.Label();
-			this.sistemaFaturaDataSet2 = new WindowsFormsApp1.SistemaFaturaDataSet2();
-			this.categoriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.categoriaTableAdapter = new WindowsFormsApp1.SistemaFaturaDataSet2TableAdapters.CategoriaTableAdapter();
 			this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.categoriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.sistemaFaturaDataSet2 = new WindowsFormsApp1.SistemaFaturaDataSet2();
+			this.panel1 = new System.Windows.Forms.Panel();
+			this.label3 = new System.Windows.Forms.Label();
+			this.categoriaTableAdapter = new WindowsFormsApp1.SistemaFaturaDataSet2TableAdapters.CategoriaTableAdapter();
 			this.panel2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-			this.panel1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.sistemaFaturaDataSet2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.categoriaBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.sistemaFaturaDataSet2)).BeginInit();
+			this.panel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// label5
@@ -116,6 +116,7 @@
 			// 
 			this.dataGridView1.AllowUserToDeleteRows = false;
 			this.dataGridView1.AutoGenerateColumns = false;
+			this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDDataGridViewTextBoxColumn,
@@ -126,6 +127,30 @@
 			this.dataGridView1.ReadOnly = true;
 			this.dataGridView1.Size = new System.Drawing.Size(244, 141);
 			this.dataGridView1.TabIndex = 16;
+			// 
+			// iDDataGridViewTextBoxColumn
+			// 
+			this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+			this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+			this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+			this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// nomeDataGridViewTextBoxColumn
+			// 
+			this.nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
+			this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
+			this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
+			this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// categoriaBindingSource
+			// 
+			this.categoriaBindingSource.DataMember = "Categoria";
+			this.categoriaBindingSource.DataSource = this.sistemaFaturaDataSet2;
+			// 
+			// sistemaFaturaDataSet2
+			// 
+			this.sistemaFaturaDataSet2.DataSetName = "SistemaFaturaDataSet2";
+			this.sistemaFaturaDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
 			// 
 			// panel1
 			// 
@@ -150,33 +175,9 @@
 			this.label3.TabIndex = 1;
 			this.label3.Text = "Categorias";
 			// 
-			// sistemaFaturaDataSet2
-			// 
-			this.sistemaFaturaDataSet2.DataSetName = "SistemaFaturaDataSet2";
-			this.sistemaFaturaDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-			// 
-			// categoriaBindingSource
-			// 
-			this.categoriaBindingSource.DataMember = "Categoria";
-			this.categoriaBindingSource.DataSource = this.sistemaFaturaDataSet2;
-			// 
 			// categoriaTableAdapter
 			// 
 			this.categoriaTableAdapter.ClearBeforeFill = true;
-			// 
-			// iDDataGridViewTextBoxColumn
-			// 
-			this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-			this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-			this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-			this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-			// 
-			// nomeDataGridViewTextBoxColumn
-			// 
-			this.nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
-			this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
-			this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
-			this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
 			// UC_Categorias
 			// 
@@ -193,10 +194,10 @@
 			this.panel2.ResumeLayout(false);
 			this.panel2.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.categoriaBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.sistemaFaturaDataSet2)).EndInit();
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.sistemaFaturaDataSet2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.categoriaBindingSource)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
