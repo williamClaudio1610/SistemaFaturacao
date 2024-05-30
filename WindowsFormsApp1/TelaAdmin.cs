@@ -9,12 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1.UserControls;
 using System.Data.SqlClient;
+using System.Security.RightsManagement;
 
 
 namespace WindowsFormsApp1
 {
 	public partial class TelaAdmin : Form
 	{
+		public String nomeAdmin {  get; set; }
 		String connectionStringSQL = @"Data Source=WA_16;Integrated Security=True;Trust Server Certificate=True";
 		public TelaAdmin()
 		{
@@ -76,8 +78,21 @@ namespace WindowsFormsApp1
 
 		private void TelaAdmin_Load(object sender, EventArgs e)
 		{
-			
+			label1.Text = nomeAdmin;
 
+		}
+
+		private void label1_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void logOutBtn_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+			TelaLogin tl = new TelaLogin();
+			tl.Show();
+			return;
 		}
 	}
 

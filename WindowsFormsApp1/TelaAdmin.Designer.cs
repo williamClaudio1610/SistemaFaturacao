@@ -43,11 +43,12 @@ namespace WindowsFormsApp1
 			this.iconButton1 = new FontAwesome.Sharp.IconButton();
 			this.dashBtn = new FontAwesome.Sharp.IconButton();
 			this.logoPanel = new System.Windows.Forms.Panel();
-			this.button1 = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
 			this.panel4 = new System.Windows.Forms.Panel();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.panel2.SuspendLayout();
 			this.logoPanel.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// panel2
@@ -78,7 +79,7 @@ namespace WindowsFormsApp1
 			this.iconButton5.IconColor = System.Drawing.Color.Black;
 			this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
 			this.iconButton5.IconSize = 16;
-			this.iconButton5.Location = new System.Drawing.Point(0, 312);
+			this.iconButton5.Location = new System.Drawing.Point(0, 346);
 			this.iconButton5.Name = "iconButton5";
 			this.iconButton5.Size = new System.Drawing.Size(171, 40);
 			this.iconButton5.TabIndex = 7;
@@ -97,7 +98,7 @@ namespace WindowsFormsApp1
 			this.iconButton4.IconColor = System.Drawing.Color.Black;
 			this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
 			this.iconButton4.IconSize = 16;
-			this.iconButton4.Location = new System.Drawing.Point(0, 272);
+			this.iconButton4.Location = new System.Drawing.Point(0, 306);
 			this.iconButton4.Name = "iconButton4";
 			this.iconButton4.Size = new System.Drawing.Size(171, 40);
 			this.iconButton4.TabIndex = 6;
@@ -118,6 +119,7 @@ namespace WindowsFormsApp1
 			this.logOutBtn.TabIndex = 0;
 			this.logOutBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.logOutBtn.UseVisualStyleBackColor = true;
+			this.logOutBtn.Click += new System.EventHandler(this.logOutBtn_Click);
 			// 
 			// iconButton3
 			// 
@@ -130,7 +132,7 @@ namespace WindowsFormsApp1
 			this.iconButton3.IconColor = System.Drawing.Color.Black;
 			this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
 			this.iconButton3.IconSize = 16;
-			this.iconButton3.Location = new System.Drawing.Point(0, 232);
+			this.iconButton3.Location = new System.Drawing.Point(0, 266);
 			this.iconButton3.Name = "iconButton3";
 			this.iconButton3.Size = new System.Drawing.Size(171, 40);
 			this.iconButton3.TabIndex = 5;
@@ -149,7 +151,7 @@ namespace WindowsFormsApp1
 			this.iconButton2.IconColor = System.Drawing.Color.Black;
 			this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
 			this.iconButton2.IconSize = 16;
-			this.iconButton2.Location = new System.Drawing.Point(0, 192);
+			this.iconButton2.Location = new System.Drawing.Point(0, 226);
 			this.iconButton2.Name = "iconButton2";
 			this.iconButton2.Size = new System.Drawing.Size(171, 40);
 			this.iconButton2.TabIndex = 4;
@@ -168,7 +170,7 @@ namespace WindowsFormsApp1
 			this.iconButton1.IconColor = System.Drawing.Color.Black;
 			this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
 			this.iconButton1.IconSize = 16;
-			this.iconButton1.Location = new System.Drawing.Point(0, 152);
+			this.iconButton1.Location = new System.Drawing.Point(0, 186);
 			this.iconButton1.Name = "iconButton1";
 			this.iconButton1.Size = new System.Drawing.Size(171, 40);
 			this.iconButton1.TabIndex = 3;
@@ -187,7 +189,7 @@ namespace WindowsFormsApp1
 			this.dashBtn.IconColor = System.Drawing.Color.Black;
 			this.dashBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
 			this.dashBtn.IconSize = 16;
-			this.dashBtn.Location = new System.Drawing.Point(0, 112);
+			this.dashBtn.Location = new System.Drawing.Point(0, 146);
 			this.dashBtn.Name = "dashBtn";
 			this.dashBtn.Size = new System.Drawing.Size(171, 40);
 			this.dashBtn.TabIndex = 2;
@@ -197,34 +199,26 @@ namespace WindowsFormsApp1
 			// 
 			// logoPanel
 			// 
-			this.logoPanel.Controls.Add(this.button1);
+			this.logoPanel.Controls.Add(this.pictureBox1);
 			this.logoPanel.Controls.Add(this.label1);
 			this.logoPanel.Dock = System.Windows.Forms.DockStyle.Top;
 			this.logoPanel.Location = new System.Drawing.Point(0, 0);
 			this.logoPanel.Name = "logoPanel";
-			this.logoPanel.Size = new System.Drawing.Size(171, 112);
+			this.logoPanel.Size = new System.Drawing.Size(171, 146);
 			this.logoPanel.TabIndex = 0;
-			// 
-			// button1
-			// 
-			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-			this.button1.Location = new System.Drawing.Point(59, 16);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(39, 50);
-			this.button1.TabIndex = 0;
-			this.button1.UseVisualStyleBackColor = true;
 			// 
 			// label1
 			// 
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.label1.Location = new System.Drawing.Point(29, 69);
+			this.label1.Location = new System.Drawing.Point(24, 110);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(117, 25);
 			this.label1.TabIndex = 3;
 			this.label1.Text = "AdminName";
+			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.label1.Click += new System.EventHandler(this.label1_Click);
 			// 
 			// panel4
 			// 
@@ -236,6 +230,16 @@ namespace WindowsFormsApp1
 			this.panel4.Size = new System.Drawing.Size(839, 531);
 			this.panel4.TabIndex = 3;
 			this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+			this.pictureBox1.Location = new System.Drawing.Point(29, 3);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(97, 104);
+			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.pictureBox1.TabIndex = 0;
+			this.pictureBox1.TabStop = false;
 			// 
 			// TelaAdmin
 			// 
@@ -255,6 +259,7 @@ namespace WindowsFormsApp1
 			this.panel2.ResumeLayout(false);
 			this.logoPanel.ResumeLayout(false);
 			this.logoPanel.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -271,8 +276,8 @@ namespace WindowsFormsApp1
 		private Panel panel4;
 		private Button logOutBtn;
 		private FontAwesome.Sharp.IconButton iconButton4;
-		private Button button1;
 		private FontAwesome.Sharp.IconButton iconButton5;
+		private PictureBox pictureBox1;
 	}
 
 }

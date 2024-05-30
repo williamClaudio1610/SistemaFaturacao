@@ -93,6 +93,12 @@
     <Compile Include="TelaLogin.Designer.cs">
       <DependentUpon>TelaLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="TelaVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaVenda.Designer.cs">
+      <DependentUpon>TelaVenda.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UC_AddNovoUser.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -155,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TelaLogin.resx">
       <DependentUpon>TelaLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaVenda.resx">
+      <DependentUpon>TelaVenda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_AddNovoUser.resx">
       <DependentUpon>UC_AddNovoUser.cs</DependentUpon>

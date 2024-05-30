@@ -125,5 +125,10 @@ namespace WindowsFormsApp1.UserControls
 				IVAcomboBox2.Items.Add(valor);
 			}
 		}
+
+		private void IVAcomboBox2_SelectedIndexChanged(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

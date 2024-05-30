@@ -67,7 +67,9 @@ namespace WindowsFormsApp1
 							MessageBox.Show("Bem-vindo, Administrador!");
 							this.Hide();
 							TelaAdmin ta = new TelaAdmin();
+							ta.nomeAdmin = nomeUser;
 							ta.Show();
+
 							return;
 						}
 					}
@@ -83,7 +85,10 @@ namespace WindowsFormsApp1
 						if (caixaCount > 0)
 						{
 							MessageBox.Show("Bem-vindo, Funcionário de Caixa!");
-							// Adicione aqui o código para redirecionar para a tela do funcionário de caixa
+							this.Hide();
+							TelaVenda tv = new TelaVenda();
+							tv.nomeFuncCx = nomeUser;
+							tv.Show();
 							return;
 						}
 					}

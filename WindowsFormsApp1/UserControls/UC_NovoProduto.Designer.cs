@@ -135,6 +135,7 @@
 			this.IVAcomboBox2.Name = "IVAcomboBox2";
 			this.IVAcomboBox2.Size = new System.Drawing.Size(246, 21);
 			this.IVAcomboBox2.TabIndex = 14;
+			this.IVAcomboBox2.SelectedIndexChanged += new System.EventHandler(this.IVAcomboBox2_SelectedIndexChanged);
 			// 
 			// label7
 			// 
