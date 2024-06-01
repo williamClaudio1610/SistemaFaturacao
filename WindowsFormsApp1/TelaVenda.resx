@@ -117,19 +117,40 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAdVJREFUeF7t
+        mj9OwzAYxXsIQIiLsDBwCDgBV2BALDCAGNnYuADiEBwCEBIDW+M/cQYYGMFpP9o0fKiUfLEd/H7SG9q0
+        fs9PbuJEHQEAAAAALMNau6WMu/b6kBQNnzY+6IHXezO4lMgiXZQqt7ngUiKbdNHG3XDBpUQ26eJDlu3Q
+        kiKbdOFCa+tOCmt3JUQ26cIVUBi3T4f/PygABaAAFIACUMC3AvbocHDG49c1Zcpjetk/PxQQZQXUk/db
+        86dJBlte0dv90p78xDxCAc3Jz3KEKKFpODMOXAA3+YYu6WP9wBgGL6Ao3taVqZ65LKT+SmDMovwEjDGb
+        UUpgjKKdBKOUwJhEK6BmWoJ7aWeaq7ygj8rAmfgCfr0P8IHu5OUe25kWVZ2RfXc4g1VWAPf9ECq0O6UI
+        3WAHH0ABU1VHFOPvcAMPpQCRVcAOPIgChE6G3ODRT4LaPXC55qrOyb47nMEqK0Ca5XuBMJfBKAVkvRHK
+        eiuc/c1Q9rfDNVk/EPkipUdi0R6KKqU2/KUuz4eiUUABKAAFoAAUgAIWldufpGy7AEmRTbr45X7LBZcS
+        2aSLMdUOF1xKZJM2WrtDLryEyCJ96jO/su6em0QX0fAAAAAAAIEZjT4BSp1EEOw6wckAAAAASUVORK5C
+        YII=
+</value>
+  </data>
   <metadata name="Id_Produto.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Quantidade.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="Nome_Produto.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="Preço.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="Quantidade.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Preco_UN.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="IVA.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <metadata name="sistemaFaturaDataSet2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>18, 33</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>61</value>
   </metadata>
 </root>

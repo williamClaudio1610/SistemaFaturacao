@@ -9,6 +9,23 @@ namespace WindowsFormsApp1.Classes
 {
 	internal class Produto
 	{
+		public int idProduto {  get; set; }
+		public String nomProduto {  get; set; }
+		public int qtdProduto { get; set; }
+		public decimal precoProd { get; set; }
+		public decimal ivaProduto { get; set; }
+
+		public Produto(int idProd,String nomeP, int qtdProd, decimal precoProd, decimal iva)
+		{
+			this.idProduto = idProd;
+			this.nomProduto = nomeP;
+			this.qtdProduto = qtdProd;
+			this.precoProd = precoProd;
+			this.ivaProduto = iva;
+		}
+		public Produto() { }
+		
+
 		String connectionStringSQL = "Data Source=WA_16;Initial Catalog=SistemaFatura;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
 		public int NovoProduto(string nomeP, string descricao, double preco, int quantidadePorUnidade, string nomeFornecedor, string nomeCategoria, string descricaoIVA)
 		{

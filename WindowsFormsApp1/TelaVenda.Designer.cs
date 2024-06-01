@@ -28,12 +28,14 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaVenda));
 			this.label1 = new System.Windows.Forms.Label();
 			this.ProdIDtextBox1 = new System.Windows.Forms.TextBox();
 			this.QtdtextBox2 = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.button1 = new System.Windows.Forms.Button();
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.label3 = new System.Windows.Forms.Label();
 			this.button2 = new System.Windows.Forms.Button();
 			this.button3 = new System.Windows.Forms.Button();
@@ -41,17 +43,20 @@
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.label5 = new System.Windows.Forms.Label();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
-			this.Id_Produto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Nome_Produto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Preço = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.IVA = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.textBox2 = new System.Windows.Forms.TextBox();
 			this.label6 = new System.Windows.Forms.Label();
 			this.label7 = new System.Windows.Forms.Label();
 			this.textBox3 = new System.Windows.Forms.TextBox();
+			this.sistemaFaturaDataSet2 = new WindowsFormsApp1.SistemaFaturaDataSet2();
+			this.Id_Produto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Nome_Produto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Preco_UN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.IVA = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.panel1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.sistemaFaturaDataSet2)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -109,12 +114,24 @@
 			// panel1
 			// 
 			this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(58)))), ((int)(((byte)(83)))));
+			this.panel1.Controls.Add(this.pictureBox1);
 			this.panel1.Controls.Add(this.label3);
 			this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
 			this.panel1.Location = new System.Drawing.Point(0, 0);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(914, 55);
+			this.panel1.Size = new System.Drawing.Size(993, 55);
 			this.panel1.TabIndex = 12;
+			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+			this.pictureBox1.Location = new System.Drawing.Point(940, 12);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(41, 35);
+			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.pictureBox1.TabIndex = 23;
+			this.pictureBox1.TabStop = false;
+			this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
 			// 
 			// label3
 			// 
@@ -184,49 +201,20 @@
 			// dataGridView1
 			// 
 			this.dataGridView1.AllowUserToAddRows = false;
-			this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id_Produto,
-            this.Quantidade,
             this.Nome_Produto,
-            this.Preço,
+            this.Quantidade,
+            this.Preco_UN,
             this.IVA});
+			this.dataGridView1.GridColor = System.Drawing.SystemColors.AppWorkspace;
 			this.dataGridView1.Location = new System.Drawing.Point(38, 167);
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.ReadOnly = true;
 			this.dataGridView1.Size = new System.Drawing.Size(543, 265);
 			this.dataGridView1.TabIndex = 18;
-			// 
-			// Id_Produto
-			// 
-			this.Id_Produto.HeaderText = "Id_Produto";
-			this.Id_Produto.Name = "Id_Produto";
-			this.Id_Produto.ReadOnly = true;
-			// 
-			// Quantidade
-			// 
-			this.Quantidade.HeaderText = "Quantidade";
-			this.Quantidade.Name = "Quantidade";
-			this.Quantidade.ReadOnly = true;
-			// 
-			// Nome_Produto
-			// 
-			this.Nome_Produto.HeaderText = "Nome_Produto";
-			this.Nome_Produto.Name = "Nome_Produto";
-			this.Nome_Produto.ReadOnly = true;
-			// 
-			// Preço
-			// 
-			this.Preço.HeaderText = "Preco_UN";
-			this.Preço.Name = "Preço";
-			this.Preço.ReadOnly = true;
-			// 
-			// IVA
-			// 
-			this.IVA.HeaderText = "IVA";
-			this.IVA.Name = "IVA";
-			this.IVA.ReadOnly = true;
 			// 
 			// textBox2
 			// 
@@ -264,12 +252,47 @@
 			this.textBox3.Size = new System.Drawing.Size(163, 24);
 			this.textBox3.TabIndex = 21;
 			// 
+			// sistemaFaturaDataSet2
+			// 
+			this.sistemaFaturaDataSet2.DataSetName = "SistemaFaturaDataSet2";
+			this.sistemaFaturaDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+			// 
+			// Id_Produto
+			// 
+			this.Id_Produto.HeaderText = "Id_Produto";
+			this.Id_Produto.Name = "Id_Produto";
+			this.Id_Produto.ReadOnly = true;
+			// 
+			// Nome_Produto
+			// 
+			this.Nome_Produto.HeaderText = "Nome_Produto";
+			this.Nome_Produto.Name = "Nome_Produto";
+			this.Nome_Produto.ReadOnly = true;
+			// 
+			// Quantidade
+			// 
+			this.Quantidade.HeaderText = "Quantidade";
+			this.Quantidade.Name = "Quantidade";
+			this.Quantidade.ReadOnly = true;
+			// 
+			// Preco_UN
+			// 
+			this.Preco_UN.HeaderText = "Preco_UN";
+			this.Preco_UN.Name = "Preco_UN";
+			this.Preco_UN.ReadOnly = true;
+			// 
+			// IVA
+			// 
+			this.IVA.HeaderText = "IVA";
+			this.IVA.Name = "IVA";
+			this.IVA.ReadOnly = true;
+			// 
 			// TelaVenda
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.Window;
-			this.ClientSize = new System.Drawing.Size(914, 517);
+			this.ClientSize = new System.Drawing.Size(993, 517);
 			this.Controls.Add(this.label7);
 			this.Controls.Add(this.textBox3);
 			this.Controls.Add(this.label6);
@@ -291,7 +314,9 @@
 			this.Load += new System.EventHandler(this.TelaVenda_Load);
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.sistemaFaturaDataSet2)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -311,14 +336,16 @@
 		private System.Windows.Forms.TextBox textBox1;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.DataGridView dataGridView1;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Id_Produto;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Quantidade;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Nome_Produto;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Preço;
-		private System.Windows.Forms.DataGridViewTextBoxColumn IVA;
 		private System.Windows.Forms.TextBox textBox2;
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.TextBox textBox3;
+		private SistemaFaturaDataSet2 sistemaFaturaDataSet2;
+		private System.Windows.Forms.PictureBox pictureBox1;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Id_Produto;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Nome_Produto;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Quantidade;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Preco_UN;
+		private System.Windows.Forms.DataGridViewTextBoxColumn IVA;
 	}
 }

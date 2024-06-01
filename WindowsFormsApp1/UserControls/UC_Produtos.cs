@@ -30,7 +30,7 @@ namespace WindowsFormsApp1.UserControls
 				SqlDataAdapter sqlQuery = new SqlDataAdapter("SELECT * FROM vw_ProdutosDetalhados", conn);
 				DataTable dt = new DataTable();
 				sqlQuery.Fill(dt);
-				dataGridView1.DataSource = dt;
+				dataGridView2.DataSource = dt;
 			}
 		}
 
