@@ -56,9 +56,9 @@ namespace WindowsFormsApp1
 			}
 
 			// Dados do funcionário e cliente
-			string nomeFunci = "Nome do Funcionário"; // Substitua com o nome real do funcionário
-			string nomeClient = textBox2.Text.Trim(); // Nome do cliente da TextBox
-			string nifCliente = textBox3.Text.Trim(); // NIF do cliente da TextBox
+			string nomeFunci = label3.Text;
+			string nomeClient = textBox2.Text.Trim();
+			string nifCliente = textBox3.Text.Trim();
 
 			// Gerar fatura
 			FaturarRelatorio faturarRelatorio = new FaturarRelatorio();

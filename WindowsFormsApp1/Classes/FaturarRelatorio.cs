@@ -40,7 +40,7 @@ namespace WindowsFormsApp1.Classes
 				// Adiciona título
 				var titleFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 16);
 				document.Add(new Paragraph("Fatura de Venda", titleFont));
-				document.Add(new Paragraph(" ")); // Adiciona uma linha em branco
+				document.Add(new Paragraph(" ")); 
 
 				// Adiciona informações da fatura
 				var bodyFont = FontFactory.GetFont(FontFactory.HELVETICA, 12);
@@ -48,7 +48,7 @@ namespace WindowsFormsApp1.Classes
 				document.Add(new Paragraph($"Nome do Funcionário: {nomeFunci}", bodyFont));
 				document.Add(new Paragraph($"Nome do Cliente: {nomeClient}", bodyFont));
 				document.Add(new Paragraph($"NIF do Cliente: {nifCliente}", bodyFont));
-				document.Add(new Paragraph(" ")); // Adiciona uma linha em branco
+				document.Add(new Paragraph(" "));
 
 				// Adiciona detalhes dos produtos
 				document.Add(new Paragraph("Detalhes dos Produtos:", bodyFont));
@@ -64,21 +64,17 @@ namespace WindowsFormsApp1.Classes
 					table.AddCell(produto.idProduto.ToString());
 					table.AddCell(produto.nomProduto);
 					table.AddCell(produto.qtdProduto.ToString());
-					table.AddCell(produto.precoProd.ToString("Kz"));
-					table.AddCell(produto.ivaProduto.ToString("Kz"));
+					table.AddCell(produto.precoProd.ToString("0.00 Kz"));
+					table.AddCell(produto.ivaProduto.ToString("0.00 Kz"));
 				}
 
 				document.Add(table);
 
-				// Adiciona o total da venda
 				document.Add(new Paragraph(" "));
-				document.Add(new Paragraph($"Total da Venda: {totalVenda.ToString("kz")}", bodyFont));
+				document.Add(new Paragraph($"Total da Venda: {totalVenda.ToString("0.00 Kz")}", bodyFont));
 
-				// Fecha o documento
 				document.Close();
 				registarVendaNaBD(nomeFunci, nomeClient, nifCliente, DateTime.Now, totalVenda);
-
-
 
 				MessageBox.Show($"Fatura gerada com sucesso em: {filePath}");
 			}
@@ -88,14 +84,15 @@ namespace WindowsFormsApp1.Classes
 			}
 		}
 
-		private void registarVendaNaBD(String nomeFunc, String nomeClient, String nifClient, DateTime dataVenda, decimal totalVenda) {
+		private void registarVendaNaBD(string nomeFunc, string nomeClient, string nifClient, DateTime dataVenda, decimal totalVenda)
+		{
 			using (SqlConnection conn = new SqlConnection(connectionStringSQL))
 			{
 				try
 				{
 					conn.Open();
 					int funcionarioID = 0;
-					string buscarFuncionarioQuery = "SELECT ID FROM FuncionarioCaixa WHERE Nome = @nomeFunc";
+					string buscarFuncionarioQuery = "SELECT ID FROM FuncionarioCaixa WHERE LOWER(Nome) = LOWER(@nomeFunc)";
 					using (SqlCommand buscarFuncionarioCmd = new SqlCommand(buscarFuncionarioQuery, conn))
 					{
 						buscarFuncionarioCmd.Parameters.AddWithValue("@nomeFunc", nomeFunc);
@@ -106,22 +103,21 @@ namespace WindowsFormsApp1.Classes
 						}
 						else
 						{
-							MessageBox.Show("Funcionário não encontrado.");
+							MessageBox.Show($"Funcionário '{nomeFunc}' não encontrado.");
 							return;
 						}
 					}
 
-					//dataVenda = DateTime.Now;
 					string inserirVendaQuery = "INSERT INTO Vendas(FuncionarioID, NomeCliente, ClienteNIF, DataVenda, ValorTotal) " +
-									   "VALUES (@funcionarioID, @nomeClient, @nifClient, @dataVenda, @totalVenda);";
+											   "VALUES (@funcionarioID, @nomeClient, @nifClient, @dataVenda, @totalVenda);";
 
 					using (SqlCommand inserirVendaCmd = new SqlCommand(inserirVendaQuery, conn))
 					{
 						inserirVendaCmd.Parameters.AddWithValue("@funcionarioID", funcionarioID);
-						inserirVendaCmd.Parameters.AddWithValue("@NomeCliente", nomeClient);
-						inserirVendaCmd.Parameters.AddWithValue("@ClienteNIF", nifClient);
-						inserirVendaCmd.Parameters.AddWithValue("@DataVenda", DateTime.Now);
-						inserirVendaCmd.Parameters.AddWithValue("@ValorTotal", totalVenda);
+						inserirVendaCmd.Parameters.AddWithValue("@nomeClient", nomeClient);
+						inserirVendaCmd.Parameters.AddWithValue("@nifClient", nifClient);
+						inserirVendaCmd.Parameters.AddWithValue("@dataVenda", dataVenda);
+						inserirVendaCmd.Parameters.AddWithValue("@totalVenda", totalVenda);
 
 						inserirVendaCmd.ExecuteNonQuery();
 					}
@@ -129,20 +125,18 @@ namespace WindowsFormsApp1.Classes
 					string atualizarVendasQuery = "UPDATE FuncionarioCaixa SET NumeroVendas = NumeroVendas + 1 WHERE ID = @funcionarioID";
 					using (SqlCommand atualizarVendasCmd = new SqlCommand(atualizarVendasQuery, conn))
 					{
-						atualizarVendasCmd.Parameters.AddWithValue("@FuncionarioID", funcionarioID);
+						atualizarVendasCmd.Parameters.AddWithValue("@funcionarioID", funcionarioID);
 						atualizarVendasCmd.ExecuteNonQuery();
 					}
 
-					//MessageBox.Show("Venda registrada com sucesso.");
+					MessageBox.Show("Venda registrada com sucesso.");
 				}
 				catch (Exception ex)
 				{
 					MessageBox.Show("Erro ao registrar venda: " + ex.Message);
 				}
-
-			
 			}
-		
 		}
+
 	}
 }
