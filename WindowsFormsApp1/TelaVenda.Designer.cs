@@ -43,16 +43,16 @@
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.label5 = new System.Windows.Forms.Label();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
-			this.textBox2 = new System.Windows.Forms.TextBox();
-			this.label6 = new System.Windows.Forms.Label();
-			this.label7 = new System.Windows.Forms.Label();
-			this.textBox3 = new System.Windows.Forms.TextBox();
-			this.sistemaFaturaDataSet2 = new WindowsFormsApp1.SistemaFaturaDataSet2();
 			this.Id_Produto = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Nome_Produto = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Preco_UN = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.IVA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.textBox2 = new System.Windows.Forms.TextBox();
+			this.label6 = new System.Windows.Forms.Label();
+			this.label7 = new System.Windows.Forms.Label();
+			this.textBox3 = new System.Windows.Forms.TextBox();
+			this.sistemaFaturaDataSet2 = new WindowsFormsApp1.SistemaFaturaDataSet2();
 			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -216,6 +216,36 @@
 			this.dataGridView1.Size = new System.Drawing.Size(543, 265);
 			this.dataGridView1.TabIndex = 18;
 			// 
+			// Id_Produto
+			// 
+			this.Id_Produto.HeaderText = "Id_Produto";
+			this.Id_Produto.Name = "Id_Produto";
+			this.Id_Produto.ReadOnly = true;
+			// 
+			// Nome_Produto
+			// 
+			this.Nome_Produto.HeaderText = "Nome_Produto";
+			this.Nome_Produto.Name = "Nome_Produto";
+			this.Nome_Produto.ReadOnly = true;
+			// 
+			// Quantidade
+			// 
+			this.Quantidade.HeaderText = "Quantidade";
+			this.Quantidade.Name = "Quantidade";
+			this.Quantidade.ReadOnly = true;
+			// 
+			// Preco_UN
+			// 
+			this.Preco_UN.HeaderText = "Preco_UN";
+			this.Preco_UN.Name = "Preco_UN";
+			this.Preco_UN.ReadOnly = true;
+			// 
+			// IVA
+			// 
+			this.IVA.HeaderText = "IVA";
+			this.IVA.Name = "IVA";
+			this.IVA.ReadOnly = true;
+			// 
 			// textBox2
 			// 
 			this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -257,36 +287,6 @@
 			this.sistemaFaturaDataSet2.DataSetName = "SistemaFaturaDataSet2";
 			this.sistemaFaturaDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
 			// 
-			// Id_Produto
-			// 
-			this.Id_Produto.HeaderText = "Id_Produto";
-			this.Id_Produto.Name = "Id_Produto";
-			this.Id_Produto.ReadOnly = true;
-			// 
-			// Nome_Produto
-			// 
-			this.Nome_Produto.HeaderText = "Nome_Produto";
-			this.Nome_Produto.Name = "Nome_Produto";
-			this.Nome_Produto.ReadOnly = true;
-			// 
-			// Quantidade
-			// 
-			this.Quantidade.HeaderText = "Quantidade";
-			this.Quantidade.Name = "Quantidade";
-			this.Quantidade.ReadOnly = true;
-			// 
-			// Preco_UN
-			// 
-			this.Preco_UN.HeaderText = "Preco_UN";
-			this.Preco_UN.Name = "Preco_UN";
-			this.Preco_UN.ReadOnly = true;
-			// 
-			// IVA
-			// 
-			this.IVA.HeaderText = "IVA";
-			this.IVA.Name = "IVA";
-			this.IVA.ReadOnly = true;
-			// 
 			// TelaVenda
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -309,6 +309,7 @@
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.ProdIDtextBox1);
 			this.Controls.Add(this.label1);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.Name = "TelaVenda";
 			this.Text = "TelaVenda";
 			this.Load += new System.EventHandler(this.TelaVenda_Load);
