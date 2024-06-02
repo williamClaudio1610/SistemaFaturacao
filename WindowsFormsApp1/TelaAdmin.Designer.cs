@@ -65,7 +65,7 @@ namespace WindowsFormsApp1
 			this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
 			this.panel2.Location = new System.Drawing.Point(9, 0);
 			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(171, 531);
+			this.panel2.Size = new System.Drawing.Size(202, 560);
 			this.panel2.TabIndex = 1;
 			// 
 			// iconButton5
@@ -81,7 +81,7 @@ namespace WindowsFormsApp1
 			this.iconButton5.IconSize = 16;
 			this.iconButton5.Location = new System.Drawing.Point(0, 346);
 			this.iconButton5.Name = "iconButton5";
-			this.iconButton5.Size = new System.Drawing.Size(171, 40);
+			this.iconButton5.Size = new System.Drawing.Size(202, 40);
 			this.iconButton5.TabIndex = 7;
 			this.iconButton5.Text = "Categorias de Produtos";
 			this.iconButton5.UseVisualStyleBackColor = true;
@@ -100,7 +100,7 @@ namespace WindowsFormsApp1
 			this.iconButton4.IconSize = 16;
 			this.iconButton4.Location = new System.Drawing.Point(0, 306);
 			this.iconButton4.Name = "iconButton4";
-			this.iconButton4.Size = new System.Drawing.Size(171, 40);
+			this.iconButton4.Size = new System.Drawing.Size(202, 40);
 			this.iconButton4.TabIndex = 6;
 			this.iconButton4.Text = "Fornecedores";
 			this.iconButton4.UseVisualStyleBackColor = true;
@@ -112,10 +112,10 @@ namespace WindowsFormsApp1
 			this.logOutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.logOutBtn.Image = ((System.Drawing.Image)(resources.GetObject("logOutBtn.Image")));
 			this.logOutBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.logOutBtn.Location = new System.Drawing.Point(0, 477);
+			this.logOutBtn.Location = new System.Drawing.Point(0, 506);
 			this.logOutBtn.Name = "logOutBtn";
 			this.logOutBtn.Padding = new System.Windows.Forms.Padding(9, 0, 17, 0);
-			this.logOutBtn.Size = new System.Drawing.Size(171, 54);
+			this.logOutBtn.Size = new System.Drawing.Size(202, 54);
 			this.logOutBtn.TabIndex = 0;
 			this.logOutBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.logOutBtn.UseVisualStyleBackColor = true;
@@ -134,7 +134,7 @@ namespace WindowsFormsApp1
 			this.iconButton3.IconSize = 16;
 			this.iconButton3.Location = new System.Drawing.Point(0, 266);
 			this.iconButton3.Name = "iconButton3";
-			this.iconButton3.Size = new System.Drawing.Size(171, 40);
+			this.iconButton3.Size = new System.Drawing.Size(202, 40);
 			this.iconButton3.TabIndex = 5;
 			this.iconButton3.Text = "Taxas";
 			this.iconButton3.UseVisualStyleBackColor = true;
@@ -153,7 +153,7 @@ namespace WindowsFormsApp1
 			this.iconButton2.IconSize = 16;
 			this.iconButton2.Location = new System.Drawing.Point(0, 226);
 			this.iconButton2.Name = "iconButton2";
-			this.iconButton2.Size = new System.Drawing.Size(171, 40);
+			this.iconButton2.Size = new System.Drawing.Size(202, 40);
 			this.iconButton2.TabIndex = 4;
 			this.iconButton2.Text = "Usuários";
 			this.iconButton2.UseVisualStyleBackColor = true;
@@ -172,7 +172,7 @@ namespace WindowsFormsApp1
 			this.iconButton1.IconSize = 16;
 			this.iconButton1.Location = new System.Drawing.Point(0, 186);
 			this.iconButton1.Name = "iconButton1";
-			this.iconButton1.Size = new System.Drawing.Size(171, 40);
+			this.iconButton1.Size = new System.Drawing.Size(202, 40);
 			this.iconButton1.TabIndex = 3;
 			this.iconButton1.Text = "Produtos";
 			this.iconButton1.UseVisualStyleBackColor = true;
@@ -191,7 +191,7 @@ namespace WindowsFormsApp1
 			this.dashBtn.IconSize = 16;
 			this.dashBtn.Location = new System.Drawing.Point(0, 146);
 			this.dashBtn.Name = "dashBtn";
-			this.dashBtn.Size = new System.Drawing.Size(171, 40);
+			this.dashBtn.Size = new System.Drawing.Size(202, 40);
 			this.dashBtn.TabIndex = 2;
 			this.dashBtn.Text = "DashBoard";
 			this.dashBtn.UseVisualStyleBackColor = true;
@@ -199,18 +199,18 @@ namespace WindowsFormsApp1
 			// 
 			// logoPanel
 			// 
-			this.logoPanel.Controls.Add(this.pictureBox1);
 			this.logoPanel.Controls.Add(this.label1);
+			this.logoPanel.Controls.Add(this.pictureBox1);
 			this.logoPanel.Dock = System.Windows.Forms.DockStyle.Top;
 			this.logoPanel.Location = new System.Drawing.Point(0, 0);
 			this.logoPanel.Name = "logoPanel";
-			this.logoPanel.Size = new System.Drawing.Size(171, 146);
+			this.logoPanel.Size = new System.Drawing.Size(202, 146);
 			this.logoPanel.TabIndex = 0;
 			// 
 			// pictureBox1
 			// 
 			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-			this.pictureBox1.Location = new System.Drawing.Point(29, 3);
+			this.pictureBox1.Location = new System.Drawing.Point(44, 3);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(97, 104);
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -222,7 +222,7 @@ namespace WindowsFormsApp1
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.label1.Location = new System.Drawing.Point(24, 110);
+			this.label1.Location = new System.Drawing.Point(39, 118);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(117, 25);
 			this.label1.TabIndex = 3;
@@ -235,9 +235,9 @@ namespace WindowsFormsApp1
 			this.panel4.AutoScroll = true;
 			this.panel4.BackColor = System.Drawing.Color.White;
 			this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.panel4.Location = new System.Drawing.Point(180, 0);
+			this.panel4.Location = new System.Drawing.Point(211, 0);
 			this.panel4.Name = "panel4";
-			this.panel4.Size = new System.Drawing.Size(839, 531);
+			this.panel4.Size = new System.Drawing.Size(896, 560);
 			this.panel4.TabIndex = 3;
 			this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
 			// 
@@ -246,7 +246,7 @@ namespace WindowsFormsApp1
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-			this.ClientSize = new System.Drawing.Size(1036, 531);
+			this.ClientSize = new System.Drawing.Size(1124, 560);
 			this.Controls.Add(this.panel4);
 			this.Controls.Add(this.panel2);
 			this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;

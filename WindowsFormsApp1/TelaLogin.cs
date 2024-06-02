@@ -64,7 +64,7 @@ namespace WindowsFormsApp1
 
 						if (adminCount > 0)
 						{
-							MessageBox.Show("Bem-vindo, Administrador!");
+							MessageBox.Show("Bem-vindo, Administrador " + nomeUser);
 							this.Hide();
 							TelaAdmin ta = new TelaAdmin();
 							ta.nomeAdmin = nomeUser;

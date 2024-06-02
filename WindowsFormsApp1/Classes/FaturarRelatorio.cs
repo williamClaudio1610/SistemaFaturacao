@@ -65,7 +65,7 @@ namespace WindowsFormsApp1.Classes
 					table.AddCell(produto.nomProduto);
 					table.AddCell(produto.qtdProduto.ToString());
 					table.AddCell(produto.precoProd.ToString("0.00 Kz"));
-					table.AddCell(produto.ivaProduto.ToString("0.00 Kz"));
+					table.AddCell(produto.ivaProduto.ToString("0.00 %"));
 				}
 
 				document.Add(table);
