@@ -168,6 +168,7 @@
 			this.button3.TabIndex = 14;
 			this.button3.Text = "Cancelar venda";
 			this.button3.UseVisualStyleBackColor = false;
+			this.button3.Click += new System.EventHandler(this.button3_Click);
 			// 
 			// label4
 			// 
@@ -213,7 +214,7 @@
 			this.dataGridView1.Location = new System.Drawing.Point(38, 167);
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.ReadOnly = true;
-			this.dataGridView1.Size = new System.Drawing.Size(543, 265);
+			this.dataGridView1.Size = new System.Drawing.Size(543, 314);
 			this.dataGridView1.TabIndex = 18;
 			// 
 			// Id_Produto
@@ -292,7 +293,7 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.Window;
-			this.ClientSize = new System.Drawing.Size(993, 517);
+			this.ClientSize = new System.Drawing.Size(993, 544);
 			this.Controls.Add(this.label7);
 			this.Controls.Add(this.textBox3);
 			this.Controls.Add(this.label6);

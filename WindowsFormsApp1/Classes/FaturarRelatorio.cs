@@ -17,32 +17,32 @@ namespace WindowsFormsApp1.Classes
 		{
 			try
 			{
-				// Define o caminho onde o PDF será salvo
+				
 				string directoryPath = @"C:\Users\Admin\Documents\ISPTEC - Universidade\ISPTEC- 3º ano - 2023-2024\2º Semestre\Engenharia de Software 2\SistemaDeFatura - estável\Faturas";
 
-				// Verifica se o diretório existe, se não, cria
+				
 				if (!Directory.Exists(directoryPath))
 				{
 					Directory.CreateDirectory(directoryPath);
 				}
 
-				// Define o nome do arquivo com base na data e hora atuais
+				
 				string fileName = $"Fatura_{DateTime.Now.ToString("yyyyMMdd_HHmmss")}.pdf";
 				string filePath = Path.Combine(directoryPath, fileName);
 
-				// Cria um documento PDF
+				
 				Document document = new Document();
 				PdfWriter.GetInstance(document, new FileStream(filePath, FileMode.Create));
 
-				// Abre o documento para escrever
+				
 				document.Open();
 
-				// Adiciona título
+				
 				var titleFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 16);
 				document.Add(new Paragraph("Fatura de Venda", titleFont));
 				document.Add(new Paragraph(" ")); 
 
-				// Adiciona informações da fatura
+				
 				var bodyFont = FontFactory.GetFont(FontFactory.HELVETICA, 12);
 				document.Add(new Paragraph($"Data: {DateTime.Now}", bodyFont));
 				document.Add(new Paragraph($"Nome do Funcionário: {nomeFunci}", bodyFont));
@@ -50,7 +50,7 @@ namespace WindowsFormsApp1.Classes
 				document.Add(new Paragraph($"NIF do Cliente: {nifCliente}", bodyFont));
 				document.Add(new Paragraph(" "));
 
-				// Adiciona detalhes dos produtos
+				// Adicionar detalhes dos produtos
 				document.Add(new Paragraph("Detalhes dos Produtos:", bodyFont));
 				PdfPTable table = new PdfPTable(5);
 				table.AddCell("ID Produto");
@@ -65,7 +65,7 @@ namespace WindowsFormsApp1.Classes
 					table.AddCell(produto.nomProduto);
 					table.AddCell(produto.qtdProduto.ToString());
 					table.AddCell(produto.precoProd.ToString("0.00 Kz"));
-					table.AddCell(produto.ivaProduto.ToString("0.00 %"));
+					table.AddCell(produto.ivaProduto.ToString() + "%");
 				}
 
 				document.Add(table);

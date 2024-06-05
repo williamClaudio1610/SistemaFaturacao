@@ -63,6 +63,10 @@ namespace WindowsFormsApp1
 			// Gerar fatura
 			FaturarRelatorio faturarRelatorio = new FaturarRelatorio();
 			faturarRelatorio.gerarFaturaRelatorioPDF(listaProdutos, nomeFunci, nomeClient, nifCliente, totalVenda);
+
+			dataGridView1.Rows.Clear();
+			QtdtextBox2.Clear();
+			ProdIDtextBox1.Clear();
 		}
 
 
@@ -147,6 +151,13 @@ namespace WindowsFormsApp1
 			TelaLogin tl = new TelaLogin();
 			tl.Show();
 			return;
+		}
+
+		private void button3_Click(object sender, EventArgs e)
+		{
+			dataGridView1.Rows.Clear();
+			QtdtextBox2.Clear();
+			ProdIDtextBox1.Clear();
 		}
 	}
 }
