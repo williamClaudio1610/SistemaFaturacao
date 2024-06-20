@@ -13,7 +13,7 @@ namespace WindowsFormsApp1.Classes
 	{
 		String connectionStringSQL = "Data Source=WA_16;Initial Catalog=SistemaFatura;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
 
-		public void gerarFaturaRelatorioPDF(List<Produto> produtos, string nomeFunci, string nomeClient, string nifCliente, decimal totalVenda)
+		public void gerarFaturaRelatorioPDF(List<Produto> produtos, string nomeFunci, string nomeClient, string nifCliente, decimal totalVenda, decimal desconto)
 		{
 			try
 			{
@@ -72,6 +72,7 @@ namespace WindowsFormsApp1.Classes
 
 				document.Add(new Paragraph(" "));
 				document.Add(new Paragraph($"Total da Venda: {totalVenda.ToString("0.00 Kz")}", bodyFont));
+				document.Add(new Paragraph($"Desconto: {desconto.ToString("0.00 Kz")}", bodyFont));
 
 				document.Close();
 				registarVendaNaBD(nomeFunci, nomeClient, nifCliente, DateTime.Now, totalVenda);
@@ -135,6 +136,76 @@ namespace WindowsFormsApp1.Classes
 				{
 					MessageBox.Show("Erro ao registrar venda: " + ex.Message);
 				}
+			}
+		}
+
+		public void gerarFaturaProforma(List<Produto> produtos, string nomeClient, string nifCliente, decimal totalVenda, decimal desconto)
+		{
+			try
+			{
+
+				string directoryPath = @"C:\Users\Admin\Documents\ISPTEC - Universidade\ISPTEC- 3º ano - 2023-2024\2º Semestre\Engenharia de Software 2\SistemaDeFatura - estável\Faturas";
+
+
+				if (!Directory.Exists(directoryPath))
+				{
+					Directory.CreateDirectory(directoryPath);
+				}
+
+
+				string fileName = $"Fatura_{DateTime.Now.ToString("Proforma_" + "yyyyMMdd_HHmmss")}.pdf";
+				string filePath = Path.Combine(directoryPath, fileName);
+
+
+				Document document = new Document();
+				PdfWriter.GetInstance(document, new FileStream(filePath, FileMode.Create));
+
+
+				document.Open();
+
+
+				var titleFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 16);
+				document.Add(new Paragraph("Fatura de Venda", titleFont));
+				document.Add(new Paragraph(" "));
+
+
+				var bodyFont = FontFactory.GetFont(FontFactory.HELVETICA, 12);
+				document.Add(new Paragraph($"Data: {DateTime.Now}", bodyFont));
+				document.Add(new Paragraph($"Nome do Cliente: {nomeClient}", bodyFont));
+				document.Add(new Paragraph($"NIF do Cliente: {nifCliente}", bodyFont));
+				document.Add(new Paragraph(" "));
+
+				// Adicionar detalhes dos produtos
+				document.Add(new Paragraph("Detalhes dos Produtos:", bodyFont));
+				PdfPTable table = new PdfPTable(5);
+				table.AddCell("ID Produto");
+				table.AddCell("Nome Produto");
+				table.AddCell("Quantidade");
+				table.AddCell("Preço Unitário");
+				table.AddCell("IVA");
+
+				foreach (Produto produto in produtos)
+				{
+					table.AddCell(produto.idProduto.ToString());
+					table.AddCell(produto.nomProduto);
+					table.AddCell(produto.qtdProduto.ToString());
+					table.AddCell(produto.precoProd.ToString("0.00 Kz"));
+					table.AddCell(produto.ivaProduto.ToString() + "%");
+				}
+
+				document.Add(table);
+
+				document.Add(new Paragraph(" "));
+				document.Add(new Paragraph($"Total da Venda: {totalVenda.ToString("0.00 Kz")}", bodyFont));
+				document.Add(new Paragraph($"Desconto: {desconto.ToString("0.00 Kz")}", bodyFont));
+
+				document.Close();
+
+				MessageBox.Show($"Proforma gerada com sucesso em: {filePath}");
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Erro ao gerar Proforma: " + ex.Message);
 			}
 		}
 

@@ -119,7 +119,7 @@
 			this.addNovoPro.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.addNovoPro.Image = ((System.Drawing.Image)(resources.GetObject("addNovoPro.Image")));
 			this.addNovoPro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.addNovoPro.Location = new System.Drawing.Point(275, 408);
+			this.addNovoPro.Location = new System.Drawing.Point(26, 402);
 			this.addNovoPro.Name = "addNovoPro";
 			this.addNovoPro.Size = new System.Drawing.Size(187, 74);
 			this.addNovoPro.TabIndex = 3;
