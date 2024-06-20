@@ -51,9 +51,17 @@ namespace WindowsFormsApp1.UserControls
 			String iva = IVAcomboBox2.Text;
 			String preco = PrecoUNtextBox4.Text;
 
+
 			// Variáveis para armazenar os valores convertidos
 			int quantidade;
 			double precoUnitario;
+			decimal valorIVA;
+
+			if (!decimal.TryParse(iva, out valorIVA))
+			{
+				MessageBox.Show("IVA inválido. Por favor, insira um valor numérico.");
+				return;
+			}
 
 			// Tentar converter a quantidade
 			if (!int.TryParse(qtd, out quantidade))
@@ -69,17 +77,24 @@ namespace WindowsFormsApp1.UserControls
 				return;
 			}
 
-			Produto prod = new Produto();
-			int resul = prod.NovoProduto(nome, desc, precoUnitario, quantidade, forn, categ, iva);
+			// Tentar converter o IVA
+			if (!decimal.TryParse(iva, out valorIVA))
+			{
+				MessageBox.Show("IVA inválido. Por favor, insira um valor numérico.");
+				return;
+			}
 
-			// Verificação do resultado e exibição de mensagem apropriada
+			Produto prod = new Produto();
+			int resul = prod.NovoProduto(nome, desc, precoUnitario, quantidade, forn, categ, valorIVA);
+
+			// Verificar o resultado e exibir mensagens apropriadas
 			switch (resul)
 			{
 				case 0:
-					MessageBox.Show("Produto adicionado com sucesso.");
+					MessageBox.Show("Produto adicionado com sucesso!");
 					break;
 				case 1:
-					MessageBox.Show("Todos os campos devem ser preenchidos e os valores devem ser positivos.");
+					MessageBox.Show("Campos vazios ou valores inválidos.");
 					break;
 				case 2:
 					MessageBox.Show("Fornecedor não encontrado.");
@@ -91,10 +106,7 @@ namespace WindowsFormsApp1.UserControls
 					MessageBox.Show("Taxa de IVA não encontrada.");
 					break;
 				case -1:
-					MessageBox.Show("Erro durante a operação.");
-					break;
-				default:
-					MessageBox.Show("Resultado desconhecido.");
+					MessageBox.Show("Erro ao adicionar o produto.");
 					break;
 			}
 		}

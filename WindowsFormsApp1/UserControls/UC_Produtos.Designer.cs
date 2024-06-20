@@ -30,9 +30,6 @@
 		{
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Produtos));
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.label1 = new System.Windows.Forms.Label();
 			this.produtosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -55,14 +52,6 @@
 			this.nomeFornecedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.iVADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.nomeCategoriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-			this.nomeProdutoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.precoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.quantidadePorUnidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.nomeFornecedorDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.iVADataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.nomeCategoriaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.produtosBindingSource1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.sistemaFaturaDataSetBindingSource)).BeginInit();
@@ -74,7 +63,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.sistemaFaturaDataSet2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.vwProdutosDetalhadosBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// panel1
@@ -131,9 +119,9 @@
 			this.addNovoPro.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.addNovoPro.Image = ((System.Drawing.Image)(resources.GetObject("addNovoPro.Image")));
 			this.addNovoPro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.addNovoPro.Location = new System.Drawing.Point(26, 388);
+			this.addNovoPro.Location = new System.Drawing.Point(275, 408);
 			this.addNovoPro.Name = "addNovoPro";
-			this.addNovoPro.Size = new System.Drawing.Size(241, 68);
+			this.addNovoPro.Size = new System.Drawing.Size(187, 74);
 			this.addNovoPro.TabIndex = 3;
 			this.addNovoPro.Text = "Adicionar novo produto";
 			this.addNovoPro.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -185,7 +173,7 @@
 			this.dataGridView2.DataSource = this.vwProdutosDetalhadosBindingSource;
 			this.dataGridView2.Location = new System.Drawing.Point(26, 107);
 			this.dataGridView2.Name = "dataGridView2";
-			this.dataGridView2.Size = new System.Drawing.Size(744, 217);
+			this.dataGridView2.Size = new System.Drawing.Size(744, 275);
 			this.dataGridView2.TabIndex = 4;
 			// 
 			// nomeProdutoDataGridViewTextBoxColumn
@@ -230,114 +218,11 @@
 			this.nomeCategoriaDataGridViewTextBoxColumn.HeaderText = "NomeCategoria";
 			this.nomeCategoriaDataGridViewTextBoxColumn.Name = "nomeCategoriaDataGridViewTextBoxColumn";
 			// 
-			// dataGridView1
-			// 
-			dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-			this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-			this.dataGridView1.AutoGenerateColumns = false;
-			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-			this.dataGridView1.ColumnHeadersHeight = 15;
-			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nomeProdutoDataGridViewTextBoxColumn1,
-            this.descricaoDataGridViewTextBoxColumn,
-            this.precoDataGridViewTextBoxColumn,
-            this.quantidadePorUnidadeDataGridViewTextBoxColumn,
-            this.nomeFornecedorDataGridViewTextBoxColumn1,
-            this.iVADataGridViewTextBoxColumn1,
-            this.nomeCategoriaDataGridViewTextBoxColumn1});
-			this.dataGridView1.DataSource = this.vwProdutosDetalhadosBindingSource;
-			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-			this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-			this.dataGridView1.Location = new System.Drawing.Point(307, 330);
-			this.dataGridView1.Name = "dataGridView1";
-			this.dataGridView1.RowHeadersVisible = false;
-			this.dataGridView1.Size = new System.Drawing.Size(585, 150);
-			this.dataGridView1.TabIndex = 5;
-			this.dataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-			this.dataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
-			this.dataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-			this.dataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-			this.dataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-			this.dataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White;
-			this.dataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-			this.dataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-			this.dataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			this.dataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.dataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-			this.dataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-			this.dataGridView1.ThemeStyle.HeaderStyle.Height = 15;
-			this.dataGridView1.ThemeStyle.ReadOnly = false;
-			this.dataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-			this.dataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-			this.dataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.dataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-			this.dataGridView1.ThemeStyle.RowsStyle.Height = 22;
-			this.dataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-			this.dataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-			// 
-			// nomeProdutoDataGridViewTextBoxColumn1
-			// 
-			this.nomeProdutoDataGridViewTextBoxColumn1.DataPropertyName = "NomeProduto";
-			this.nomeProdutoDataGridViewTextBoxColumn1.HeaderText = "NomeProduto";
-			this.nomeProdutoDataGridViewTextBoxColumn1.Name = "nomeProdutoDataGridViewTextBoxColumn1";
-			// 
-			// descricaoDataGridViewTextBoxColumn
-			// 
-			this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "Descricao";
-			this.descricaoDataGridViewTextBoxColumn.HeaderText = "Descricao";
-			this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
-			// 
-			// precoDataGridViewTextBoxColumn
-			// 
-			this.precoDataGridViewTextBoxColumn.DataPropertyName = "Preco";
-			this.precoDataGridViewTextBoxColumn.HeaderText = "Preco";
-			this.precoDataGridViewTextBoxColumn.Name = "precoDataGridViewTextBoxColumn";
-			// 
-			// quantidadePorUnidadeDataGridViewTextBoxColumn
-			// 
-			this.quantidadePorUnidadeDataGridViewTextBoxColumn.DataPropertyName = "QuantidadePorUnidade";
-			this.quantidadePorUnidadeDataGridViewTextBoxColumn.HeaderText = "QuantidadePorUnidade";
-			this.quantidadePorUnidadeDataGridViewTextBoxColumn.Name = "quantidadePorUnidadeDataGridViewTextBoxColumn";
-			// 
-			// nomeFornecedorDataGridViewTextBoxColumn1
-			// 
-			this.nomeFornecedorDataGridViewTextBoxColumn1.DataPropertyName = "NomeFornecedor";
-			this.nomeFornecedorDataGridViewTextBoxColumn1.HeaderText = "NomeFornecedor";
-			this.nomeFornecedorDataGridViewTextBoxColumn1.Name = "nomeFornecedorDataGridViewTextBoxColumn1";
-			// 
-			// iVADataGridViewTextBoxColumn1
-			// 
-			this.iVADataGridViewTextBoxColumn1.DataPropertyName = "IVA";
-			this.iVADataGridViewTextBoxColumn1.HeaderText = "IVA";
-			this.iVADataGridViewTextBoxColumn1.Name = "iVADataGridViewTextBoxColumn1";
-			// 
-			// nomeCategoriaDataGridViewTextBoxColumn1
-			// 
-			this.nomeCategoriaDataGridViewTextBoxColumn1.DataPropertyName = "NomeCategoria";
-			this.nomeCategoriaDataGridViewTextBoxColumn1.HeaderText = "NomeCategoria";
-			this.nomeCategoriaDataGridViewTextBoxColumn1.Name = "nomeCategoriaDataGridViewTextBoxColumn1";
-			// 
 			// UC_Produtos
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.Control;
-			this.Controls.Add(this.dataGridView1);
 			this.Controls.Add(this.dataGridView2);
 			this.Controls.Add(this.addNovoPro);
 			this.Controls.Add(this.panel1);
@@ -356,7 +241,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.sistemaFaturaDataSet2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.vwProdutosDetalhadosBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -385,13 +269,5 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn nomeFornecedorDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn iVADataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn nomeCategoriaDataGridViewTextBoxColumn;
-		private Guna.UI2.WinForms.Guna2DataGridView dataGridView1;
-		private System.Windows.Forms.DataGridViewTextBoxColumn nomeProdutoDataGridViewTextBoxColumn1;
-		private System.Windows.Forms.DataGridViewTextBoxColumn descricaoDataGridViewTextBoxColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn precoDataGridViewTextBoxColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn quantidadePorUnidadeDataGridViewTextBoxColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn nomeFornecedorDataGridViewTextBoxColumn1;
-		private System.Windows.Forms.DataGridViewTextBoxColumn iVADataGridViewTextBoxColumn1;
-		private System.Windows.Forms.DataGridViewTextBoxColumn nomeCategoriaDataGridViewTextBoxColumn1;
 	}
 }

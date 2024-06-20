@@ -15,6 +15,7 @@ namespace WindowsFormsApp1
 {
 	public partial class TelaVenda : Form
 	{
+
 		String connectionStringSQL = "Data Source=WA_16;Initial Catalog=SistemaFatura;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
 		public String nomeFuncCx { get; set; }
 		public TelaVenda()
