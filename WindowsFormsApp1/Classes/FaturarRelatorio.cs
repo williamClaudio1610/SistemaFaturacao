@@ -39,19 +39,45 @@ namespace WindowsFormsApp1.Classes
 
 				
 				var titleFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 16);
-				document.Add(new Paragraph("Fatura de Venda", titleFont));
-				document.Add(new Paragraph(" ")); 
-
-				
 				var bodyFont = FontFactory.GetFont(FontFactory.HELVETICA, 12);
-				document.Add(new Paragraph($"Data: {DateTime.Now}", bodyFont));
-				document.Add(new Paragraph($"Nome do Funcionário: {nomeFunci}", bodyFont));
-				document.Add(new Paragraph($"Nome do Cliente: {nomeClient}", bodyFont));
-				document.Add(new Paragraph($"NIF do Cliente: {nifCliente}", bodyFont));
+
+				document.Add(new Paragraph("Fatura de Venda", titleFont));
 				document.Add(new Paragraph(" "));
+
+
+				//teste
+				// Adicionar tabela para dados da empresa e do cliente/fatura
+				PdfPTable mainTable = new PdfPTable(2);
+				mainTable.WidthPercentage = 100;
+				mainTable.SetWidths(new float[] { 60, 40 }); // Definir largura relativa das colunas
+
+				// Célula para dados da fatura/cliente
+				PdfPCell faturaCell = new PdfPCell();
+				faturaCell.Border = PdfPCell.NO_BORDER;
+				faturaCell.AddElement(new Paragraph($"Data: {DateTime.Now}", bodyFont));
+				faturaCell.AddElement(new Paragraph(" "));
+				faturaCell.AddElement(new Paragraph($"Funcionário: {nomeFunci}", bodyFont));
+				faturaCell.AddElement(new Paragraph($"Nome do Cliente: {nomeClient}", bodyFont));
+				faturaCell.AddElement(new Paragraph($"NIF do Cliente: {nifCliente}", bodyFont));
+				faturaCell.AddElement(new Paragraph(" "));
+
+				// Célula para dados da empresa
+				PdfPCell companyCell = new PdfPCell();
+				companyCell.Border = PdfPCell.NO_BORDER;
+				companyCell.HorizontalAlignment = Element.ALIGN_RIGHT;
+				companyCell.AddElement(new Paragraph("ISPTEC Peças-Auto", bodyFont));
+				companyCell.AddElement(new Paragraph("Talatona - Municipio de Belas", bodyFont));
+				companyCell.AddElement(new Paragraph("Telefone: (+244) 949-276-083", bodyFont));
+				companyCell.AddElement(new Paragraph("Email: isptecauto@isptec.com", bodyFont));
+
+				mainTable.AddCell(faturaCell);
+				mainTable.AddCell(companyCell);
+
+				document.Add(mainTable);
 
 				// Adicionar detalhes dos produtos
 				document.Add(new Paragraph("Detalhes dos Produtos:", bodyFont));
+				document.Add(new Paragraph(" "));
 				PdfPTable table = new PdfPTable(5);
 				table.AddCell("ID Produto");
 				table.AddCell("Nome Produto");
@@ -144,7 +170,7 @@ namespace WindowsFormsApp1.Classes
 			try
 			{
 
-				string directoryPath = @"C:\Users\Admin\Documents\ISPTEC - Universidade\ISPTEC- 3º ano - 2023-2024\2º Semestre\Engenharia de Software 2\SistemaDeFatura - estável\Faturas";
+				string directoryPath = @"C:\Users\Admin\Documents\ISPTEC - Universidade\ISPTEC- 3º ano - 2023-2024\2º Semestre\Engenharia de Software 2\SistemaDeFatura - estável\FaturasProforma";
 
 
 				if (!Directory.Exists(directoryPath))

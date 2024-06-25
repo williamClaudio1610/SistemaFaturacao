@@ -63,10 +63,17 @@
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
 			this.button5 = new System.Windows.Forms.Button();
+			this.label12 = new System.Windows.Forms.Label();
+			this.textBox6 = new System.Windows.Forms.TextBox();
+			this.label13 = new System.Windows.Forms.Label();
+			this.label14 = new System.Windows.Forms.Label();
+			this.textBox7 = new System.Windows.Forms.TextBox();
+			this.label15 = new System.Windows.Forms.Label();
 			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.sistemaFaturaDataSet2)).BeginInit();
+			this.panel2.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -160,7 +167,7 @@
 			// 
 			this.button2.BackColor = System.Drawing.Color.LimeGreen;
 			this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button2.Location = new System.Drawing.Point(825, 622);
+			this.button2.Location = new System.Drawing.Point(854, 622);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(127, 61);
 			this.button2.TabIndex = 13;
@@ -309,6 +316,7 @@
 			this.button4.TabIndex = 23;
 			this.button4.Text = "Proforma";
 			this.button4.UseVisualStyleBackColor = false;
+			this.button4.Click += new System.EventHandler(this.button4_Click);
 			// 
 			// textBox4
 			// 
@@ -348,6 +356,7 @@
 			this.textBox5.Name = "textBox5";
 			this.textBox5.Size = new System.Drawing.Size(206, 31);
 			this.textBox5.TabIndex = 27;
+			this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
 			// 
 			// label11
 			// 
@@ -362,15 +371,21 @@
 			// label9
 			// 
 			this.label9.AutoSize = true;
-			this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label9.Location = new System.Drawing.Point(613, 419);
+			this.label9.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label9.Location = new System.Drawing.Point(612, 403);
 			this.label9.Name = "label9";
-			this.label9.Size = new System.Drawing.Size(180, 20);
+			this.label9.Size = new System.Drawing.Size(203, 25);
 			this.label9.TabIndex = 29;
 			this.label9.Text = "Forma de pagamento";
 			// 
 			// panel2
 			// 
+			this.panel2.Controls.Add(this.label14);
+			this.panel2.Controls.Add(this.textBox7);
+			this.panel2.Controls.Add(this.label15);
+			this.panel2.Controls.Add(this.label13);
+			this.panel2.Controls.Add(this.textBox6);
+			this.panel2.Controls.Add(this.label12);
 			this.panel2.Location = new System.Drawing.Point(617, 459);
 			this.panel2.Name = "panel2";
 			this.panel2.Size = new System.Drawing.Size(382, 100);
@@ -383,16 +398,14 @@
 			this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
 			this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-			this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
+			this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
 			this.guna2ComboBox1.ItemHeight = 30;
-			this.guna2ComboBox1.Items.AddRange(new object[] {
-            "Multicaixa",
-            "Numerário (Cash)"});
 			this.guna2ComboBox1.Location = new System.Drawing.Point(810, 403);
 			this.guna2ComboBox1.Name = "guna2ComboBox1";
 			this.guna2ComboBox1.Size = new System.Drawing.Size(189, 36);
 			this.guna2ComboBox1.TabIndex = 31;
+			this.guna2ComboBox1.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBox1_SelectedIndexChanged);
 			// 
 			// button5
 			// 
@@ -402,8 +415,67 @@
 			this.button5.Name = "button5";
 			this.button5.Size = new System.Drawing.Size(127, 61);
 			this.button5.TabIndex = 32;
-			this.button5.Text = "Ver Fatura";
+			this.button5.Text = "Preview Fatura";
 			this.button5.UseVisualStyleBackColor = false;
+			// 
+			// label12
+			// 
+			this.label12.AutoSize = true;
+			this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label12.Location = new System.Drawing.Point(20, 16);
+			this.label12.Name = "label12";
+			this.label12.Size = new System.Drawing.Size(85, 20);
+			this.label12.TabIndex = 16;
+			this.label12.Text = "Recebido";
+			// 
+			// textBox6
+			// 
+			this.textBox6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.textBox6.Location = new System.Drawing.Point(120, 12);
+			this.textBox6.Name = "textBox6";
+			this.textBox6.Size = new System.Drawing.Size(163, 29);
+			this.textBox6.TabIndex = 17;
+			this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+			// 
+			// label13
+			// 
+			this.label13.AutoSize = true;
+			this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label13.Location = new System.Drawing.Point(300, 21);
+			this.label13.Name = "label13";
+			this.label13.Size = new System.Drawing.Size(29, 20);
+			this.label13.TabIndex = 18;
+			this.label13.Text = "Kz";
+			// 
+			// label14
+			// 
+			this.label14.AutoSize = true;
+			this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label14.Location = new System.Drawing.Point(300, 67);
+			this.label14.Name = "label14";
+			this.label14.Size = new System.Drawing.Size(29, 20);
+			this.label14.TabIndex = 21;
+			this.label14.Text = "Kz";
+			// 
+			// textBox7
+			// 
+			this.textBox7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.textBox7.Location = new System.Drawing.Point(120, 58);
+			this.textBox7.Name = "textBox7";
+			this.textBox7.Size = new System.Drawing.Size(163, 29);
+			this.textBox7.TabIndex = 20;
+			this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+			this.textBox7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+			// 
+			// label15
+			// 
+			this.label15.AutoSize = true;
+			this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label15.Location = new System.Drawing.Point(51, 62);
+			this.label15.Name = "label15";
+			this.label15.Size = new System.Drawing.Size(54, 20);
+			this.label15.TabIndex = 19;
+			this.label15.Text = "Troco";
 			// 
 			// TelaVenda
 			// 
@@ -446,6 +518,8 @@
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.sistemaFaturaDataSet2)).EndInit();
+			this.panel2.ResumeLayout(false);
+			this.panel2.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -486,5 +560,11 @@
 		private System.Windows.Forms.Panel panel2;
 		private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
 		private System.Windows.Forms.Button button5;
+		private System.Windows.Forms.Label label13;
+		private System.Windows.Forms.TextBox textBox6;
+		private System.Windows.Forms.Label label12;
+		private System.Windows.Forms.Label label14;
+		private System.Windows.Forms.TextBox textBox7;
+		private System.Windows.Forms.Label label15;
 	}
 }
