@@ -89,10 +89,16 @@ namespace WindowsFormsApp1
 
 		private void logOutBtn_Click(object sender, EventArgs e)
 		{
-			this.Hide();
-			TelaLogin tl = new TelaLogin();
-			tl.Show();
-			return;
+			DialogResult confirmaLogOut = MessageBox.Show("Tem a certeza que pretende fazer log out do sistema ?", "Fazendo LogOut", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+			if (confirmaLogOut == DialogResult.Yes)
+			{
+				MessageBox.Show("Fazendo logout, até a próxima venda");
+				this.Hide();
+				TelaLogin tl = new TelaLogin();
+				tl.Show();
+				return;
+			}
 		}
 	}
 
