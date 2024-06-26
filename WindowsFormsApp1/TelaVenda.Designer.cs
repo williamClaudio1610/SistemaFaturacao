@@ -61,14 +61,14 @@
 			this.label11 = new System.Windows.Forms.Label();
 			this.label9 = new System.Windows.Forms.Label();
 			this.panel2 = new System.Windows.Forms.Panel();
-			this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
-			this.button5 = new System.Windows.Forms.Button();
-			this.label12 = new System.Windows.Forms.Label();
-			this.textBox6 = new System.Windows.Forms.TextBox();
-			this.label13 = new System.Windows.Forms.Label();
 			this.label14 = new System.Windows.Forms.Label();
 			this.textBox7 = new System.Windows.Forms.TextBox();
 			this.label15 = new System.Windows.Forms.Label();
+			this.label13 = new System.Windows.Forms.Label();
+			this.textBox6 = new System.Windows.Forms.TextBox();
+			this.label12 = new System.Windows.Forms.Label();
+			this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+			this.button5 = new System.Windows.Forms.Button();
 			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -136,7 +136,7 @@
 			this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
 			this.panel1.Location = new System.Drawing.Point(0, 0);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(1026, 55);
+			this.panel1.Size = new System.Drawing.Size(1019, 55);
 			this.panel1.TabIndex = 12;
 			// 
 			// pictureBox1
@@ -167,7 +167,7 @@
 			// 
 			this.button2.BackColor = System.Drawing.Color.LimeGreen;
 			this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button2.Location = new System.Drawing.Point(854, 622);
+			this.button2.Location = new System.Drawing.Point(872, 610);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(127, 61);
 			this.button2.TabIndex = 13;
@@ -179,7 +179,7 @@
 			// 
 			this.button3.BackColor = System.Drawing.Color.Red;
 			this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button3.Location = new System.Drawing.Point(38, 564);
+			this.button3.Location = new System.Drawing.Point(38, 610);
 			this.button3.Name = "button3";
 			this.button3.Size = new System.Drawing.Size(127, 61);
 			this.button3.TabIndex = 14;
@@ -310,7 +310,7 @@
 			// 
 			this.button4.BackColor = System.Drawing.Color.DarkCyan;
 			this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button4.Location = new System.Drawing.Point(198, 564);
+			this.button4.Location = new System.Drawing.Point(194, 610);
 			this.button4.Name = "button4";
 			this.button4.Size = new System.Drawing.Size(127, 61);
 			this.button4.TabIndex = 23;
@@ -326,6 +326,7 @@
 			this.textBox4.Name = "textBox4";
 			this.textBox4.Size = new System.Drawing.Size(163, 31);
 			this.textBox4.TabIndex = 24;
+			this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged_1);
 			this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
 			// 
 			// label8
@@ -391,62 +392,6 @@
 			this.panel2.Size = new System.Drawing.Size(382, 100);
 			this.panel2.TabIndex = 30;
 			// 
-			// guna2ComboBox1
-			// 
-			this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-			this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-			this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-			this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-			this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-			this.guna2ComboBox1.ItemHeight = 30;
-			this.guna2ComboBox1.Location = new System.Drawing.Point(810, 403);
-			this.guna2ComboBox1.Name = "guna2ComboBox1";
-			this.guna2ComboBox1.Size = new System.Drawing.Size(189, 36);
-			this.guna2ComboBox1.TabIndex = 31;
-			this.guna2ComboBox1.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBox1_SelectedIndexChanged);
-			// 
-			// button5
-			// 
-			this.button5.BackColor = System.Drawing.Color.MediumSpringGreen;
-			this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button5.Location = new System.Drawing.Point(348, 564);
-			this.button5.Name = "button5";
-			this.button5.Size = new System.Drawing.Size(127, 61);
-			this.button5.TabIndex = 32;
-			this.button5.Text = "Preview Fatura";
-			this.button5.UseVisualStyleBackColor = false;
-			// 
-			// label12
-			// 
-			this.label12.AutoSize = true;
-			this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label12.Location = new System.Drawing.Point(20, 16);
-			this.label12.Name = "label12";
-			this.label12.Size = new System.Drawing.Size(85, 20);
-			this.label12.TabIndex = 16;
-			this.label12.Text = "Recebido";
-			// 
-			// textBox6
-			// 
-			this.textBox6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBox6.Location = new System.Drawing.Point(120, 12);
-			this.textBox6.Name = "textBox6";
-			this.textBox6.Size = new System.Drawing.Size(163, 29);
-			this.textBox6.TabIndex = 17;
-			this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-			// 
-			// label13
-			// 
-			this.label13.AutoSize = true;
-			this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label13.Location = new System.Drawing.Point(300, 21);
-			this.label13.Name = "label13";
-			this.label13.Size = new System.Drawing.Size(29, 20);
-			this.label13.TabIndex = 18;
-			this.label13.Text = "Kz";
-			// 
 			// label14
 			// 
 			this.label14.AutoSize = true;
@@ -477,12 +422,69 @@
 			this.label15.TabIndex = 19;
 			this.label15.Text = "Troco";
 			// 
+			// label13
+			// 
+			this.label13.AutoSize = true;
+			this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label13.Location = new System.Drawing.Point(300, 21);
+			this.label13.Name = "label13";
+			this.label13.Size = new System.Drawing.Size(29, 20);
+			this.label13.TabIndex = 18;
+			this.label13.Text = "Kz";
+			// 
+			// textBox6
+			// 
+			this.textBox6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.textBox6.Location = new System.Drawing.Point(120, 12);
+			this.textBox6.Name = "textBox6";
+			this.textBox6.Size = new System.Drawing.Size(163, 29);
+			this.textBox6.TabIndex = 17;
+			this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+			// 
+			// label12
+			// 
+			this.label12.AutoSize = true;
+			this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label12.Location = new System.Drawing.Point(20, 16);
+			this.label12.Name = "label12";
+			this.label12.Size = new System.Drawing.Size(85, 20);
+			this.label12.TabIndex = 16;
+			this.label12.Text = "Recebido";
+			// 
+			// guna2ComboBox1
+			// 
+			this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
+			this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+			this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+			this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+			this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+			this.guna2ComboBox1.ItemHeight = 30;
+			this.guna2ComboBox1.Location = new System.Drawing.Point(810, 403);
+			this.guna2ComboBox1.Name = "guna2ComboBox1";
+			this.guna2ComboBox1.Size = new System.Drawing.Size(189, 36);
+			this.guna2ComboBox1.TabIndex = 31;
+			this.guna2ComboBox1.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBox1_SelectedIndexChanged);
+			// 
+			// button5
+			// 
+			this.button5.BackColor = System.Drawing.Color.MediumSpringGreen;
+			this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button5.Location = new System.Drawing.Point(357, 610);
+			this.button5.Name = "button5";
+			this.button5.Size = new System.Drawing.Size(127, 61);
+			this.button5.TabIndex = 32;
+			this.button5.Text = "Preview Fatura";
+			this.button5.UseVisualStyleBackColor = false;
+			this.button5.Click += new System.EventHandler(this.button5_Click);
+			// 
 			// TelaVenda
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.Window;
-			this.ClientSize = new System.Drawing.Size(1026, 695);
+			this.ClientSize = new System.Drawing.Size(1019, 695);
 			this.Controls.Add(this.button5);
 			this.Controls.Add(this.guna2ComboBox1);
 			this.Controls.Add(this.panel2);

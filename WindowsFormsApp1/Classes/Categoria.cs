@@ -39,14 +39,19 @@ namespace WindowsFormsApp1.Classes
 					}
 
 					// Inserir a nova categoria
-					string insertQuery = "INSERT INTO Categoria (Nome) VALUES (@nomeCategoria)";
-					using (SqlCommand insertCmd = new SqlCommand(insertQuery, conn))
+					using (SqlCommand cmd = new SqlCommand("sp_InserirCategoria", conn))
 					{
-						insertCmd.Parameters.AddWithValue("@nomeCategoria", nomeCategoria);
-						insertCmd.ExecuteNonQuery();
-					}
+						cmd.CommandType = System.Data.CommandType.StoredProcedure;
+						cmd.Parameters.AddWithValue("@Nome", nomeCategoria);
 
-					return 0; // Indica sucesso
+						int rowsAffected = cmd.ExecuteNonQuery();
+						if (rowsAffected > 0)
+						{
+							return 0;
+						}
+
+						return 0; // Indica sucesso
+					}
 				}
 				catch (Exception ex)
 				{

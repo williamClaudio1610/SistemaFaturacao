@@ -37,6 +37,14 @@ namespace WindowsFormsApp1.UserControls
 			{
 				case 0:
 					MessageBox.Show("Categoria adicionada com sucesso.");
+						UC_Categorias uc = new UC_Categorias();
+						Form telaAdmin = this.ParentForm as Form;
+						if (telaAdmin != null)
+						{
+							TelaAdmin tl = (TelaAdmin)telaAdmin;
+							tl.addUserControls(uc);
+						}
+
 					break;
 				case 1:
 					MessageBox.Show("O nome da categoria não pode estar vazio.");

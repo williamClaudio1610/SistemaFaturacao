@@ -44,8 +44,6 @@ namespace WindowsFormsApp1.Classes
 				document.Add(new Paragraph("Fatura de Venda", titleFont));
 				document.Add(new Paragraph(" "));
 
-
-				//teste
 				// Adicionar tabela para dados da empresa e do cliente/fatura
 				PdfPTable mainTable = new PdfPTable(2);
 				mainTable.WidthPercentage = 100;
@@ -104,6 +102,7 @@ namespace WindowsFormsApp1.Classes
 				registarVendaNaBD(nomeFunci, nomeClient, nifCliente, DateTime.Now, totalVenda);
 
 				MessageBox.Show($"Fatura gerada com sucesso em: {filePath}");
+				AtualizarQuantidadeProdutos(produtos);
 			}
 			catch (Exception ex)
 			{
@@ -189,17 +188,39 @@ namespace WindowsFormsApp1.Classes
 
 				document.Open();
 
-
 				var titleFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 16);
+				var bodyFont = FontFactory.GetFont(FontFactory.HELVETICA, 12);
+
 				document.Add(new Paragraph("Fatura de Venda", titleFont));
 				document.Add(new Paragraph(" "));
 
+				// Tabela para dados da empresa e do cliente/fatura
+				PdfPTable mainTable = new PdfPTable(2);
+				mainTable.WidthPercentage = 100;
+				mainTable.SetWidths(new float[] { 60, 40 }); // Definir largura relativa das colunas
 
-				var bodyFont = FontFactory.GetFont(FontFactory.HELVETICA, 12);
-				document.Add(new Paragraph($"Data: {DateTime.Now}", bodyFont));
-				document.Add(new Paragraph($"Nome do Cliente: {nomeClient}", bodyFont));
-				document.Add(new Paragraph($"NIF do Cliente: {nifCliente}", bodyFont));
-				document.Add(new Paragraph(" "));
+				// Célula para dados da fatura/cliente
+				PdfPCell faturaCell = new PdfPCell();
+				faturaCell.Border = PdfPCell.NO_BORDER;
+				faturaCell.AddElement(new Paragraph($"Data: {DateTime.Now}", bodyFont));
+				faturaCell.AddElement(new Paragraph(" "));
+				faturaCell.AddElement(new Paragraph($"Nome do Cliente: {nomeClient}", bodyFont));
+				faturaCell.AddElement(new Paragraph($"NIF do Cliente: {nifCliente}", bodyFont));
+				faturaCell.AddElement(new Paragraph(" "));
+
+				// Célula para dados da empresa
+				PdfPCell companyCell = new PdfPCell();
+				companyCell.Border = PdfPCell.NO_BORDER;
+				companyCell.HorizontalAlignment = Element.ALIGN_RIGHT;
+				companyCell.AddElement(new Paragraph("ISPTEC Peças-Auto", bodyFont));
+				companyCell.AddElement(new Paragraph("Talatona - Municipio de Belas", bodyFont));
+				companyCell.AddElement(new Paragraph("Telefone: (+244) 949-276-083", bodyFont));
+				companyCell.AddElement(new Paragraph("Email: isptecauto@isptec.com", bodyFont));
+
+				mainTable.AddCell(faturaCell);
+				mainTable.AddCell(companyCell);
+
+				document.Add(mainTable);
 
 				// Adicionar detalhes dos produtos
 				document.Add(new Paragraph("Detalhes dos Produtos:", bodyFont));
@@ -235,5 +256,117 @@ namespace WindowsFormsApp1.Classes
 			}
 		}
 
+		public void gerarFaturaPreview(List<Produto> produtos, string nomeFunci, string nomeClient, string nifCliente, decimal totalVenda, decimal desconto)
+		{
+			try
+			{
+				string directoryPath = Path.GetTempPath();
+
+				string fileName = $"FaturaPreview_{DateTime.Now.ToString("yyyyMMdd_HHmmss")}.pdf";
+				string filePath = Path.Combine(directoryPath, fileName);
+
+				Document document = new Document();
+				PdfWriter.GetInstance(document, new FileStream(filePath, FileMode.Create));
+				var titleFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 16);
+				var bodyFont = FontFactory.GetFont(FontFactory.HELVETICA, 12);
+
+				document.Open();
+
+				document.Add(new Paragraph("Pré-visualização da Fatura de Venda", titleFont));
+				document.Add(new Paragraph(" "));
+
+				// Tabela para dados da empresa e do cliente/fatura
+				PdfPTable mainTable = new PdfPTable(2);
+				mainTable.WidthPercentage = 100;
+				mainTable.SetWidths(new float[] { 60, 40 }); // Definir largura relativa das colunas
+
+				// Célula para dados da fatura/cliente
+				PdfPCell faturaCell = new PdfPCell();
+				faturaCell.Border = PdfPCell.NO_BORDER;
+				faturaCell.AddElement(new Paragraph($"Data: {DateTime.Now}", bodyFont));
+				faturaCell.AddElement(new Paragraph(" "));
+				faturaCell.AddElement(new Paragraph($"Nome do Cliente: {nomeClient}", bodyFont));
+				faturaCell.AddElement(new Paragraph($"NIF do Cliente: {nifCliente}", bodyFont));
+				faturaCell.AddElement(new Paragraph(" "));
+
+				// Célula para dados da empresa
+				PdfPCell companyCell = new PdfPCell();
+				companyCell.Border = PdfPCell.NO_BORDER;
+				companyCell.HorizontalAlignment = Element.ALIGN_RIGHT;
+				companyCell.AddElement(new Paragraph("ISPTEC Peças-Auto", bodyFont));
+				companyCell.AddElement(new Paragraph("Talatona - Municipio de Belas", bodyFont));
+				companyCell.AddElement(new Paragraph("Telefone: (+244) 949-276-083", bodyFont));
+				companyCell.AddElement(new Paragraph("Email: isptecauto@isptec.com", bodyFont));
+
+				mainTable.AddCell(faturaCell);
+				mainTable.AddCell(companyCell);
+
+				document.Add(mainTable);
+
+				document.Add(new Paragraph("Detalhes dos Produtos:", bodyFont));
+				document.Add(new Paragraph(" "));
+				PdfPTable table = new PdfPTable(5);
+				table.AddCell("ID Produto");
+				table.AddCell("Nome Produto");
+				table.AddCell("Quantidade");
+				table.AddCell("Preço Unitário");
+				table.AddCell("IVA");
+
+				foreach (Produto produto in produtos)
+				{
+					table.AddCell(produto.idProduto.ToString());
+					table.AddCell(produto.nomProduto);
+					table.AddCell(produto.qtdProduto.ToString());
+					table.AddCell(produto.precoProd.ToString("0.00 Kz"));
+					table.AddCell(produto.ivaProduto.ToString() + "%");
+				}
+
+				document.Add(table);
+
+				document.Add(new Paragraph(" "));
+				document.Add(new Paragraph($"Total da Venda: {totalVenda.ToString("0.00 Kz")}", bodyFont));
+				document.Add(new Paragraph($"Desconto: {desconto.ToString("0.00 Kz")}", bodyFont));
+
+				document.Close();
+
+				System.Diagnostics.Process.Start(filePath); 
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Erro ao gerar pré-visualização da fatura: " + ex.Message);
+			}
+		}
+
+		private void AtualizarQuantidadeProdutos(List<Produto> produtosVendidos)
+		{
+			using (SqlConnection conn = new SqlConnection(connectionStringSQL))
+			{
+				try
+				{
+					conn.Open();
+
+					foreach (Produto produto in produtosVendidos)
+					{
+						using (SqlCommand cmd = new SqlCommand("AtualizarQuantidadeProduto", conn))
+						{
+							cmd.CommandType = System.Data.CommandType.StoredProcedure;
+							cmd.Parameters.AddWithValue("@quantidadeVendida", produto.qtdProduto);
+							cmd.Parameters.AddWithValue("@produtoId", produto.idProduto);
+
+							cmd.ExecuteNonQuery();
+						}
+					}
+
+					MessageBox.Show("Quantidade dos produtos atualizada com sucesso.");
+				}
+				catch (Exception ex)
+				{
+					MessageBox.Show("Erro ao atualizar quantidade dos produtos: " + ex.Message);
+				}
+			}
+		}
+
 	}
+
 }
+

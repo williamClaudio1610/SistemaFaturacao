@@ -92,6 +92,14 @@ namespace WindowsFormsApp1.UserControls
 			{
 				case 0:
 					MessageBox.Show("Produto adicionado com sucesso!");
+					this.Hide();
+					UC_Produtos uc = new UC_Produtos();
+					Form telaAdmin = this.ParentForm as Form;
+					if (telaAdmin != null)
+					{
+						TelaAdmin tl = (TelaAdmin)telaAdmin;
+						tl.addUserControls(uc);
+					}
 					break;
 				case 1:
 					MessageBox.Show("Campos vazios ou valores inválidos.");

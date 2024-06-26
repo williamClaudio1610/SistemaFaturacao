@@ -48,9 +48,10 @@ namespace WindowsFormsApp1.UserControls
 				try
 				{
 					conn.Open();
-					string insertQuery = "INSERT INTO TaxasIVA (Descricao, Taxa) VALUES (@Descricao, @Taxa)";
-					using (SqlCommand cmd = new SqlCommand(insertQuery, conn))
+					//string insertQuery = "INSERT INTO TaxasIVA (Descricao, Taxa) VALUES (@Descricao, @Taxa)";
+					using (SqlCommand cmd = new SqlCommand("sp_InserirTaxaIVA", conn))
 					{
+						cmd.CommandType = System.Data.CommandType.StoredProcedure;
 						cmd.Parameters.AddWithValue("@Descricao", descricao);
 						cmd.Parameters.AddWithValue("@Taxa", valor);
 
